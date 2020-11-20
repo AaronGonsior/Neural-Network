@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="172.105.90.172" id="5427798e-482a-4b16-98d9-47bc784972d3" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" username="root" />
+      <sshConfig host="172.105.90.172" id="09753442-33bb-45a8-a4ca-1926c1a82161" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+      <sshConfig host="172.105.90.172" id="d9e8dbb4-580f-48a6-9f32-7c01d24eb79b" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+      <sshConfig host="172.105.90.172" id="8f15e964-1536-41f7-b65d-9cadbdda266b" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+      <sshConfig host="172.105.90.172" id="feb28c16-dfea-402f-bd1a-3a2d316655e7" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+      <sshConfig host="172.105.90.172" id="c146f764-1f04-4f63-b8fc-fb952768110b" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+      <sshConfig host="172.105.90.172" id="238414f0-9325-4126-a043-26df24c4c460" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+      <sshConfig host="172.105.90.172" id="c98726dd-2414-414f-ac79-db4aac655e19" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+      <sshConfig host="172.105.90.172" id="63de7d5b-0d00-47e3-ae1e-9fe4e4975d61" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+      <sshConfig host="172.105.90.172" id="b50e7cc0-e532-4efc-a88f-15c678cedfcd" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+      <sshConfig host="172.105.90.172" id="e31c35f6-705d-4fba-ad20-ca1e53229ea7" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+      <sshConfig host="172.105.90.172" id="333f71fd-8d73-4906-be89-724847b430b8" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+      <sshConfig host="172.105.90.172" id="a9989caf-fd25-44d4-9bb0-d3e3ee710272" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+      <sshConfig host="172.105.90.172" id="d9cd5067-7845-40a4-b880-df4c33678402" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+      <sshConfig host="172.105.90.172" id="b358f885-6726-4e42-a861-992f581fcc76" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+      <sshConfig host="172.105.90.172" id="498b7096-9d02-4c37-8ee2-a40810aacf12" keyPath="C:\Users\aaron\.ssh\id_rsa" port="22" customName="LinodeOne" nameFormat="CUSTOM" />
+    </configs>
+  </component>
+</project>

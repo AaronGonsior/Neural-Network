@@ -1,0 +1,2307 @@
+Iteration 1
+avg. error: 5.706404278852044Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 2.1527666666666665
+new improvement found: sigma_minus: 0.1 with improvement 0.11943333333333372
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.1399166666666667
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.13228333333333353
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.1384666666666665
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.1337333333333337
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.1382833333333333
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.1339166666666669
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 2.1382833333333333
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 2.1382833333333333
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 2.1382833333333333
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 8.413183511062999E10 > eta 297546.45095696865
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 2.1382833333333333
+Sigma_avg: 5.500000000000002E-7 erfüllt Armijo
+Sigma_minus: 1.0000000000000005E-7 
+2.1005483275565768E11 > eta 297546.45095696865
+Sigma_minus: 5.500000000000002E-7 erfüllt nicht PW
+Sigma_avg: 7.750000000000003E-7 avg_error_after: 2.1382833333333333
+Sigma_avg: 7.750000000000003E-7 erfüllt Armijo
+Sigma_minus: 5.500000000000002E-7 
+2.1005483263604398E11 > eta 297546.45095696865
+Sigma_minus: 7.750000000000003E-7 erfüllt nicht PW
+Sigma_avg: 8.875000000000004E-7 avg_error_after: 2.1382833333333333
+Sigma_avg: 8.875000000000004E-7 erfüllt Armijo
+Sigma_minus: 7.750000000000003E-7 
+2.100548324990666E11 > eta 297546.45095696865
+Sigma_minus: 8.875000000000004E-7 erfüllt nicht PW
+Sigma_avg: 9.437500000000004E-7 avg_error_after: 2.1382833333333333
+Sigma_minus: 8.875000000000004E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 8.875000000000004E-7 erfüllt PW
+Final(2) Sigma: 8.875000000000004E-7
+Iteration 2
+avg. error: 5.496334475881385Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 1.9911833333333333
+new improvement found: sigma_minus: 0.1 with improvement 0.1471
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 1.9754
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.16288333333333327
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.9735166666666666
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.16476666666666673
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.9733833333333333
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.16490000000000005
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 1.97335
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.16493333333333338
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 1.97335
+Sigma_minus: 1.0000000000000004E-6 erfüllt Armijo
+Sigma_plus: 1.0000000000000003E-5 7.553319650835738E10 > eta 282794.41142815305
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht PW
+Sigma_avg: 5.5000000000000016E-6 avg_error_after: 1.97335
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000003E-5 Sigma_minus: 1.0000000000000004E-6 erfüllt PW
+Final(2) Sigma: 1.0000000000000004E-6
+Iteration 3
+avg. error: 5.280272997819152Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 1.8031666666666666
+new improvement found: sigma_minus: 0.1 with improvement 0.1701666666666668
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 1.7853666666666668
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.18796666666666662
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.78375
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.18958333333333344
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.7835666666666667
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.18976666666666664
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 1.78355
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.18978333333333341
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+Iteration 1
+avg. error: 5.562888245078762
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 2.45455
+new improvement found: sigma_minus: 0.1 with improvement 0.13071666666666681
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.4407666666666668
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.14449999999999985
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.439766666666667
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.14549999999999974
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.439583333333333
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.1456833333333334
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 2.439566666666667
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.14569999999999972
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 2.439566666666667
+Sigma_minus: 1.0000000000000004E-6 erfüllt Armijo
+Sigma_plus: 1.0000000000000003E-5 6.4058581877664764E10 > eta 258813.5776747325
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht PW
+Sigma_avg: 5.5000000000000016E-6 avg_error_after: 2.43955
+new improvement found: sigma_minus: 1.0000000000000004E-6 with improvement 0.1457166666666665
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000003E-5 Sigma_minus: 1.0000000000000004E-6 erfüllt PW
+Final(2) Sigma: 1.0000000000000004E-6
+Iteration 2
+avg. error: 5.400967758266763
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 2.2920166666666666
+new improvement found: sigma_minus: 0.1 with improvement 0.14753333333333352
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.2774666666666668
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.16208333333333336
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.2758666666666665
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.16368333333333362
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.2756666666666665
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.1638833333333336
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 2.2756666666666665
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 2.2756666666666665
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 2.2756666666666665
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 1.1928829276310216E11 > eta 506323.44750702946
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 2.2756666666666665
+Sigma_avg: 5.500000000000002E-7 erfüllt Armijo
+Sigma_minus: 1.0000000000000005E-7 
+3.801224499257382E11 > eta 506323.44750702946
+Sigma_minus: 5.500000000000002E-7 erfüllt nicht PW
+Sigma_avg: 7.750000000000003E-7 avg_error_after: 2.2756333333333334
+new improvement found: sigma_minus: 5.500000000000002E-7 with improvement 0.1639166666666667
+Sigma_minus: 5.500000000000002E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 5.500000000000002E-7 erfüllt PW
+Final(2) Sigma: 5.500000000000002E-7
+Iteration 3
+avg. error: 5.23368417300619
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 2.1205166666666666
+new improvement found: sigma_minus: 0.1 with improvement 0.1551166666666668
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.1049166666666665
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.17071666666666685
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.1033833333333334
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.17225000000000001
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.103266666666667
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.17236666666666656
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 2.103266666666667
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 2.103266666666667
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 2.103266666666667
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 1.655023118203351E11 > eta 741923.0831222297
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 2.103266666666667
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Iteration 4
+avg. error: 5.06123611085184
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 1.94175
+new improvement found: sigma_minus: 0.1 with improvement 0.16151666666666675
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 1.92425
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.17901666666666682
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.9228333333333334
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.18043333333333345
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.92255
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.18071666666666686
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 1.9225333333333334
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.1807333333333334
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+testing1
+testing2
+testing3
+testing4
+Iteration 1
+avg. error: 7.348337741500736
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 3.1595166666666668
+new improvement found: sigma_minus: 0.1 with improvement 0.19443333333333346
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 3.1414333333333335
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.2125166666666667
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 3.139466666666667
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.21448333333333336
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 3.139266666666667
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.21468333333333334
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 3.1392166666666665
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.21473333333333366
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 3.1392166666666665
+Sigma_minus: 1.0000000000000004E-6 erfüllt Armijo
+Sigma_plus: 1.0000000000000003E-5 1.4418454736865994E11 > eta 384920.20013603504
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht PW
+Sigma_avg: 5.5000000000000016E-6 avg_error_after: 3.1392
+new improvement found: sigma_minus: 1.0000000000000004E-6 with improvement 0.21475
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000003E-5 Sigma_minus: 1.0000000000000004E-6 erfüllt PW
+Final(2) Sigma: 1.0000000000000004E-6
+Iteration 2
+avg. error: 7.167350489042281
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 2.9780333333333333
+new improvement found: sigma_minus: 0.1 with improvement 0.1611666666666669
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.9644166666666667
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.1747833333333335
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.963216666666667
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.17598333333333338
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.9630833333333335
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.1761166666666667
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 2.9630666666666667
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.17613333333333347
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 2.9630666666666667
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 2.9630666666666667
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 2.7634229221031647E11 > eta 759529.8915774008
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 2.9630666666666667
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Iteration 3
+avg. error: 6.981667735110929
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 2.8616333333333333
+new improvement found: sigma_minus: 0.1 with improvement 0.10143333333333349
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.854616666666667
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.10844999999999994
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.8539166666666667
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.10915000000000008
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.853833333333333
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.10923333333333352
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 2.853833333333333
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 2.853833333333333
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 2.853833333333333
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 3.961446562231392E11 > eta 1123404.7110720174
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 2.853833333333333
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Iteration 4
+avg. error: 6.791387341867113
+Powell-Wolfe:
+Sigma: 0.1 Iteration 1
+avg. error: 6.181665459748065
+Powell-Wolfe:
+Sigma: 0.1 Iteration 1
+Iteration 1
+Iteration 1
+avg. error: 6.208510863433485
+Powell-Wolfe:
+Sigma: 0.1 Iteration 1
+avg. error: 0.0
+Powell-Wolfe:
+Sigma: 0.1 Iteration 1
+avg. error: 6.211872358461068
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 2.65585
+new improvement found: sigma_minus: 0.1 with improvement 0.1916500000000001
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.6373333333333333
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.21016666666666683
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.6352
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.21229999999999993
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.6350333333333333
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.2124666666666668
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 2.6350166666666666
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.21248333333333358
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 2.6350166666666666
+Sigma_minus: 1.0000000000000004E-6 erfüllt Armijo
+Sigma_plus: 1.0000000000000003E-5 7.027867593331749E10 > eta 271534.05897294905
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht PW
+Sigma_avg: 5.5000000000000016E-6 avg_error_after: 2.6349833333333335
+new improvement found: sigma_minus: 1.0000000000000004E-6 with improvement 0.2125166666666667
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000003E-5 Sigma_minus: 1.0000000000000004E-6 erfüllt PW
+Final(2) Sigma: 1.0000000000000004E-6
+Iteration 2
+avg. error: 6.006773990536629
+Powell-Wolfe:
+Sigma: 0.1 Iteration 1
+avg. error: 6.596784424860406
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 2.4326833333333333
+new improvement found: sigma_minus: 0.1 with improvement 0.20230000000000015
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.4121333333333332
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.22285000000000021
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.410083333333333
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.22490000000000032
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.409866666666667
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.22511666666666663
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 2.40985
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.2251333333333334
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 2.40985
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 2.40985
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 1.3028440590853123E11 > eta 530356.9130403802
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 2.40985
+Sigma_avg: 5.500000000000002E-7 erfüllt Armijo
+Sigma_minus: 1.0000000000000005E-7 
+3.7065678121551E11 > eta 530356.9130403802
+Sigma_minus: 5.500000000000002E-7 erfüllt nicht PW
+Sigma_avg: 7.750000000000003E-7 avg_error_after: 2.40985
+Sigma_avg: 7.750000000000003E-7 erfüllt Armijo
+Sigma_minus: 5.500000000000002E-7 
+3.706567797509998E11 > eta 530356.9130403802
+Sigma_minus: 7.750000000000003E-7 erfüllt nicht PW
+Sigma_avg: 8.875000000000004E-7 avg_error_after: 2.40985
+Sigma_minus: 7.750000000000003E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 7.750000000000003E-7 erfüllt PW
+Final(2) Sigma: 7.750000000000003E-7
+Iteration 3
+avg. error: 5.797427291248205
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 2.1860333333333335
+new improvement found: sigma_minus: 0.1 with improvement 0.22381666666666655
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.1634333333333333
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.24641666666666673
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.1612833333333334
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.2485666666666666
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.1611166666666666
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.24873333333333347
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 2.1610666666666667
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.24878333333333336
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 2.1610666666666667
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 2.1610666666666667
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 1.8008126228947E11 > eta 776014.942109661
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 2.1610666666666667
+Sigma_avg: 5.500000000000002E-7 erfüllt Armijo
+Sigma_minus: 1.0000000000000005E-7 
+5.417605719281272E11 > eta 776014.942109661
+Sigma_minus: 5.500000000000002E-7 erfüllt nicht PW
+Sigma_avg: 7.750000000000003E-7 Iteration 1
+avg. error: 3.633005486812209
+Powell-Wolfe:
+Sigma: 0.1 Iteration 1
+Iteration 1
+avg. error: 5.383966496855364
+Powell-Wolfe:
+Sigma: 0.1 avg. error: 4.069469974642462
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 1.0814833333333334
+new improvement found: sigma_minus: 0.1 with improvement 0.17086666666666672
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 1.06405
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.18830000000000013
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+Iteration 1
+avg. error: 5.158294940345617
+Powell-Wolfe:
+Sigma: 0.1 avg. error: 6.103991213182937
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 1.0620666666666667
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.19028333333333336
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+Trainer null: Iteration 1
+Trainer null: Iteration 1
+avg_error_after: 1.0618166666666666
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.19053333333333344
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+Trainer null: avg. error: 5.443907351798717
+Powell-Wolfe:
+Sigma: 0.1 Trainer null: avg. error: 5.199444174033296
+Powell-Wolfe:
+Sigma: 0.1 Trainer null: avg. error: 6.842712365000539
+Powell-Wolfe:
+Sigma: 0.1 Trainer null: avg. error: 5.567895778222022
+Powell-Wolfe:
+Sigma: 0.1 Trainer null: avg. error: 5.222574306899628
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 1.0618
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.19055
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+Trainer 3: Iteration 1
+Trainer 4: Iteration 1
+Trainer 2: Iteration 1
+Trainer 5: Iteration 1
+avg_error_after: 1.0618
+Sigma_minus: 1.0000000000000004E-6 erfüllt Armijo
+Sigma_plus: 1.0000000000000003E-5 Trainer 5: avg. error: 5.368828337827797
+Powell-Wolfe:
+Sigma: 0.1 Trainer 4: avg. error: 6.1402052809831975
+Powell-Wolfe:
+Sigma: 0.1 Trainer 2: avg. error: 4.7985600881769415
+Powell-Wolfe:
+Sigma: 0.1 Trainer 1: avg. error: 6.290066075497345
+Powell-Wolfe:
+Sigma: 0.1 Trainer 3: avg. error: 5.462693795938629
+Powell-Wolfe:
+Sigma: 0.1 1.8522333759511383E10 > eta 143749.1903575097
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht PW
+Sigma_avg: 5.5000000000000016E-6 avg_error_after: 1.0618
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000003E-5 Sigma_minus: 1.0000000000000004E-6 erfüllt PW
+Final(2) Sigma: 1.0000000000000004E-6
+Iteration 2
+avg. error: 3.473478391061343
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 3.259916666666667
+new improvement found: sigma_minus: 0.1 with improvement 0.16871666666666663
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 1.8223833333333332
+new improvement found: sigma_minus: 0.1 with improvement 0.1251
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.0795
+new improvement found: sigma_minus: 0.1 with improvement 0.09715000000000007
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.6611833333333332
+new improvement found: sigma_minus: 0.1 with improvement 0.08268333333333322
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.1306833333333333
+new improvement found: sigma_minus: 0.1 with improvement 0.05679999999999996
+Sigma_minus: 0.1 erfüllt nicht Armijo
+Trainer 3: Iteration 1
+Trainer 2: Iteration 1
+Trainer 1: Iteration 1
+Trainer 5: Iteration 1
+avg_error_after: 0.9104666666666666
+new improvement found: sigma_minus: 0.1 with improvement 0.15133333333333343
+Sigma_minus: 0.1 erfüllt nicht Armijo
+Trainer 3: avg. error: 6.572849434870807
+Trainer 2: avg. error: 4.115169861033604
+Trainer 1: avg. error: 8.17959422443491
+Trainer 4: avg. error: 8.746718138423605
+Trainer 5: avg. error: 6.798488247114725
+avg_error_after: 0.8983
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.1635000000000001
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.8972166666666667
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.16458333333333341
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.89705
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.16475000000000006
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 0.89705
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 0.89705
+Sigma_minus: 1.0000000000000004E-6 erfüllt Armijo
+Sigma_plus: 1.0000000000000003E-5 3.1043720931805744E10 > eta 272611.3145416011
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht PW
+Sigma_avg: 5.5000000000000016E-6 avg_error_after: 0.89705
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000003E-5 Sigma_minus: 1.0000000000000004E-6 erfüllt PW
+Final(2) Sigma: 1.0000000000000004E-6
+Iteration 3
+avg. error: 3.3162770036211264
+Powell-Wolfe:
+Sigma: 0.1 Trainer 4: Iteration 2
+Trainer 3: Iteration 2
+Trainer 5: Iteration 2
+Trainer 2: Iteration 2
+Trainer 4: avg. error: 8.5313232513536
+Trainer 3: avg. error: 6.351184372349447
+Trainer 5: avg. error: 6.610473491585852
+Trainer 2: avg. error: 3.8975981901704118
+avg_error_after: 0.78755
+new improvement found: sigma_minus: 0.1 with improvement 0.10948333333333338
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 0.77925
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.11778333333333335
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.7785833333333333
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.11845000000000006
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.7785166666666666
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.11851666666666671
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+Trainer 1: Iteration 2
+Trainer 1: avg. error: 8.003459697206114
+avg_error_after: 0.7785
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.11853333333333338
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 0.7785
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 0.7785
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 3.83002716060657E10 > eta 386507.51709342154
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 0.7785
+Sigma_avg: 5.500000000000002E-7 erfüllt Armijo
+Sigma_minus: 1.0000000000000005E-7 
+2.1778896431458542E11 > eta 386507.51709342154
+Sigma_minus: 5.500000000000002E-7 erfüllt nicht PW
+Sigma_avg: 7.750000000000003E-7 Trainer 1: Iteration 1
+Trainer 8: Iteration 1
+Trainer 7: Iteration 1
+Trainer 6: Iteration 1
+Trainer 3: Iteration 1
+Trainer 4: Iteration 1
+Trainer 2: Iteration 1
+Trainer 5: avg. error: 4.324673669536549
+Trainer 1: avg. error: 7.534308006221585
+Trainer 4: avg. error: 7.28904211624453
+Trainer 8: avg. error: 8.02244578357316
+Trainer 6: avg. error: 6.552374964101083
+Trainer 7: avg. error: 6.337256963136589
+Trainer 3: avg. error: 6.289778976354604
+Trainer 2: avg. error: 6.333908749326038
+avg_error_after: 0.7785
+Sigma_minus: 5.500000000000002E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 5.500000000000002E-7 erfüllt PW
+Final(2) Sigma: 5.500000000000002E-7
+Iteration 4
+avg. error: 3.163986738166421
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 0.7186666666666667
+new improvement found: sigma_minus: 0.1 with improvement 0.059833333333333294
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 0.7145166666666667
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.06398333333333328
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.71415
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.06435000000000002
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.7141833333333333
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 0.7141833333333333
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+Trainer 8: avg. error: 7.817911159439581Trainer 7: avg. error: 6.168072310732777Trainer 3: avg. error: 6.149296526874658Trainer 4: avg. error: 7.063710280126293avg_error_after: 0.7141833333333333
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+Trainer 6: avg. error: 6.346879169167735Trainer 2: avg. error: 6.206771574567987avg_error_after: 0.7141833333333333
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 4.118005850572552E10 > eta 485635.03816172003
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 0.7141833333333333
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Iteration 5
+avg. error: 3.019182241654437
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 0.6907166666666666
+new improvement found: sigma_minus: 0.1 with improvement 0.023466666666666636
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 0.6890333333333334
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.025149999999999895
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+Trainer 5: avg. error: 4.064112064306565Trainer 1: avg. error: 7.359307641299967avg_error_after: 0.6888666666666666
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.025316666666666654
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.6888333333333333
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.025349999999999984
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+Trainer 3: Iteration 1
+Trainer 2: Iteration 1
+Trainer 2: avg. error: 5.382254159008309
+Trainer 3: avg. error: 9.366578649553613
+avg_error_after: 0.6888333333333333
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+Trainer 1: Iteration 1
+Trainer 2: Iteration 1
+avg_error_after: 0.6888333333333333
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 0.6888333333333333
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+avg_error_after: 0.6888333333333333
+Sigma_minus: 1.0000000000000005E-8 erfüllt Armijo
+Sigma_plus: 1.0000000000000005E-7 4.065466967346951E10 > eta 570481.4440050017
+Sigma_minus: 1.0000000000000005E-8 erfüllt nicht PW
+Sigma_avg: 5.500000000000003E-8 avg_error_after: 0.6888333333333333
+Sigma_avg: 5.500000000000003E-8 erfüllt Armijo
+Sigma_minus: 1.0000000000000005E-8 
+3.04557218929939E11 > eta 570481.4440050017
+Sigma_minus: 5.500000000000003E-8 erfüllt nicht PW
+Sigma_avg: 7.750000000000004E-8 avg_error_after: 0.6888333333333333
+Sigma_avg: 7.750000000000004E-8 erfüllt Armijo
+Sigma_minus: 5.500000000000003E-8 
+3.045572017435708E11 > eta 570481.4440050017
+Sigma_minus: 7.750000000000004E-8 erfüllt nicht PW
+Sigma_avg: 8.875000000000005E-8 avg_error_after: 0.6888333333333333
+Sigma_avg: 8.875000000000005E-8 erfüllt Armijo
+Sigma_minus: 7.750000000000004E-8 
+3.0455718204711743E11 > eta 570481.4440050017
+Sigma_minus: 8.875000000000005E-8 erfüllt nicht PW
+Sigma_avg: 9.437500000000005E-8 avg_error_after: 0.6888333333333333
+Sigma_minus: 8.875000000000005E-8 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000005E-7 Sigma_minus: 8.875000000000005E-8 erfüllt PW
+Final(2) Sigma: 8.875000000000005E-8
+Iteration 6
+avg. error: 2.8842464875917613
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 0.6895
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 0.6908833333333333
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.69095
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.6909166666666666
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 0.6909166666666666
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 0.6909166666666666
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 0.6909166666666666
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+avg_error_after: 0.6909166666666666
+Sigma_minus: 1.0000000000000005E-8 erfüllt nicht Armijo
+avg_error_after: 0.6909166666666666
+Sigma_minus: 1.0000000000000005E-9 erfüllt nicht Armijo
+Trainer 2: avg. error: 6.741861807126634avg_error_after: 0.6909166666666666
+Sigma_minus: 1.0000000000000006E-10 erfüllt nicht Armijo
+avg_error_after: 0.6909166666666666
+Sigma_minus: 1.0000000000000006E-11 erfüllt nicht Armijo
+avg_error_after: 0.6909166666666666
+Sigma_minus: 1.0000000000000006E-12 erfüllt nicht Armijo
+avg_error_after: 0.6909166666666666
+Sigma_minus: 1.0000000000000007E-13 erfüllt nicht Armijo
+avg_error_after: 0.6909166666666666
+Sigma_minus: 1.0000000000000008E-14 erfüllt nicht Armijo
+avg_error_after: 0.6909166666666666
+Sigma_minus: 1.0000000000000009E-15 erfüllt nicht Armijo
+avg_error_after: 0.6909166666666666
+Sigma_minus: 1.000000000000001E-16 erfüllt nicht Armijo
+No improvement found
+Trainer 2: avg. error: 7.148154536191614Trainer 1: Iteration 1
+Trainer 1: avg. error: 5.34252953910865
+Trainer 1: Iteration 2
+Trainer 1: avg. error: 5.154837454616362
+Trainer 1: Iteration 1
+Trainer 1: avg. error: 3.459077419186851
+Trainer 1: avg. error: 3.241978205386018Trainer null: Iteration 1
+Trainer 1: Iteration 1
+Trainer 1: Iteration 1
+Trainer 1: avg. error: 5.6339561293186255
+Trainer 1: avg. error: 5.4309300766681945Trainer null: Iteration 1
+Trainer 1: Iteration 1
+Trainer 1: avg. error: 5.4309300766681945
+Trainer 1: Iteration 1
+Trainer 1: avg. error: 5.105780958529536
+Trainer 1: avg. error: 4.90382085753057Trainer 1: Iteration 1
+Trainer 1: avg. error: 7.245609042245362
+Trainer 1: avg. error: 7.063837636952281Trainer 1: Iteration 1
+Trainer 1: avg. error: 4.90382085753057
+Trainer 1: avg. error: 4.701238197386567The current best NN got defeated.Trainer 1: Iteration 1
+Trainer 1: avg. error: 5.1814674036520065
+Trainer 1: avg. error: 4.978399418175796Trainer 1: Iteration 1
+Trainer 1: avg. error: 5.563959453150376
+Trainer 1: avg. error: 5.316711651397157Trainer 1: Iteration 1
+Trainer 1: avg. error: 4.978399418175796
+Trainer 1: avg. error: 4.773852023809572The current best NN got defeated.Trainer 2: Iteration 1
+Trainer 3: Iteration 1
+Trainer 3: avg. error: 4.3970884677608115
+Trainer 2: avg. error: 5.324055847805713
+Trainer 3: avg. error: 4.278148713240794Trainer 2: avg. error: 5.026166064759096Trainer 1: Iteration 1
+Trainer 1: avg. error: 4.773852023809572
+Trainer 1: avg. error: 4.569662945391971Trainer 3: Iteration 1
+Trainer 3: avg. error: 4.278148713240794
+Trainer 3: avg. error: 4.154655071847716The current best NN got defeated.Trainer 1: Iteration 1
+Trainer 1: avg. error: 6.443170092461967
+Trainer 1: avg. error: 6.280608993173946Trainer 1: Iteration 1
+Trainer 1: avg. error: 9.267328676222165
+1 new NNs got created to find a new competitorTrainer 1: Iteration 1
+Trainer 1: Iteration 1
+1 new NNs got created to find a new competitor1 new NNs got created to find a new competitorGeneration 0
+1 new NNs got created to find a new competitor
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer 1: avg. error: 5.302046029433249
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer 1: avg. error: 6.329296140059273
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer1 : started training
+Trainer 1: avg. error: 0.0
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 1 iterations...
+Trainer2 : started training
+Trainer3 : started training
+Trainer 2: avg. error: 0.0
+Trainer 3: avg. error: 0.0
+Trainer2 : started training
+Trainer3 : started training
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer 1 : started training
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer 1 : started training
+All trainers finished this round
+Trainer 1: avg. error: 5.754025455089012
+Generation 0
+1 new NNs got created to find a new competitor
+Trainer 1: Iteration 1
+All 1 Trainers start training for 1 iterations...
+Trainer 1: Iteration 1
+Trainer 1 : started training
+All trainers finished this round
+Trainer 1: avg. error: 6.254037085154235
+Generation 0
+1 new NNs got created to find a new competitor
+Trainer 1: Iteration 1
+All 1 Trainers start training for 10 iterations...
+Trainer 1: Iteration 1
+Trainer 1 : started training
+Generation 0
+1 new NNs got created to find a new competitor
+Trainer 1: Iteration 1
+All 1 Trainers start training for 10 iterations...
+Trainer 1: Iteration 1
+Trainer 1 : started training
+Powell-Wolfe:
+Sigma: 0.1 Powell-Wolfe:
+Sigma: 0.1 Generation 0
+1 new NNs got created to find a new competitor
+Trainer 1: Iteration 1
+All 1 Trainers start training for 10 iterations...
+Trainer 1: Iteration 1
+Trainer 1 : started training
+Powell-Wolfe:
+Sigma: 0.1 Powell-Wolfe:
+Sigma: 0.1 Generation 0
+1 new NNs got created to find a new competitor
+Trainer 1: Iteration 1
+All 1 Trainers start training for 10 iterations...
+Trainer 1: Iteration 1
+Trainer 1 : started training
+Powell-Wolfe:
+Powell-Wolfe:
+Sigma: 0.1 Generation 0
+1 new NNs got created to find a new competitor
+Trainer 1: Iteration 1
+All 1 Trainers start training for 10 iterations...
+Trainer 1: Iteration 1
+Trainer 1 : started training
+Powell-Wolfe:
+Sigma: 0.1 Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 6.643583333333333
+new improvement found: sigma_minus: 0.1 with improvement 0.11025000000000063
+Sigma_minus: 0.1 erfüllt nicht Armijo
+Generation 0
+1 new NNs got created to find a new competitor
+Trainer 1: Iteration 1
+All 1 Trainers start training for 10 iterations...
+Trainer 1: Iteration 1
+Trainer 1 : started training
+Powell-Wolfe:
+Sigma: 0.1 Powell-Wolfe:
+Sigma: 0.1 Trainer 1: Iteration 1
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 2.051066666666667
+new improvement found: sigma_minus: 0.1 with improvement 0.14098333333333324
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.0373666666666668
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.15468333333333328
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.0359166666666666
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.15613333333333346
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.035833333333333
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.1562166666666669
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 2.035816666666667
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.15623333333333322
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 2.035816666666667
+Sigma_minus: 1.0000000000000004E-6 erfüllt Armijo
+Sigma_plus: 1.0000000000000003E-5 6.7173403743573524E10 > eta 265635.32027950534
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht PW
+Sigma_avg: 5.5000000000000016E-6 avg_error_after: 2.0358
+new improvement found: sigma_minus: 1.0000000000000004E-6 with improvement 0.15625
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000003E-5 Sigma_minus: 1.0000000000000004E-6 erfüllt PW
+Final(2) Sigma: 1.0000000000000004E-6
+Trainer 1: Iteration 2
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 1.9055666666666666
+new improvement found: sigma_minus: 0.1 with improvement 0.13023333333333342
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 1.8933166666666668
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.1424833333333333
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.8920166666666667
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.14378333333333337
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.8919166666666667
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.14388333333333336
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 1.8919
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.14390000000000014
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 1.8919
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 1.8919
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 1.2431622051653798E11 > eta 518539.2161609785
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 1.8919
+Sigma_avg: 5.500000000000002E-7 erfüllt Armijo
+Sigma_minus: 1.0000000000000005E-7 
+2.244390761390691E11 > eta 518539.2161609785
+Sigma_minus: 5.500000000000002E-7 erfüllt nicht PW
+Sigma_avg: 7.750000000000003E-7 avg_error_after: 1.8919
+Sigma_minus: 5.500000000000002E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 5.500000000000002E-7 erfüllt PW
+Final(2) Sigma: 5.500000000000002E-7
+Trainer 1: Iteration 3
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 1.7780333333333334
+new improvement found: sigma_minus: 0.1 with improvement 0.11386666666666656
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 1.7677833333333333
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.12411666666666665
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.7665666666666666
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.1253333333333333
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.7664833333333334
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.1254166666666665
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 1.7664833333333334
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 1.7664833333333334
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 1.7664833333333334
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 1.7151226124256714E11 > eta 758319.9742343081
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 1.7664666666666666
+new improvement found: sigma_minus: 1.0000000000000005E-7 with improvement 0.12543333333333329
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 4
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 1.6693
+new improvement found: sigma_minus: 0.1 with improvement 0.09716666666666662
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 1.6592333333333333
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.10723333333333329
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.6582833333333333
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.1081833333333333
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.6581
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.10836666666666672
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 1.6581
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 1.6581
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 1.6581
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 2.0882729593236163E11 > eta 984540.4803899272
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 1.6581
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 5
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 1.5562666666666667
+new improvement found: sigma_minus: 0.1 with improvement 0.10183333333333322
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 1.5447333333333333
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.11336666666666662
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.54365
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.11444999999999994
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.5435833333333333
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.1145166666666666
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 1.5435833333333333
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 1.5435833333333333
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 1.5435833333333333
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 2.3629610437490912E11 > eta 1196698.2824952374
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 1.5435833333333333
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 6
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 1.4176666666666666
+new improvement found: sigma_minus: 0.1 with improvement 0.12591666666666668
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 1.4021833333333333
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.14139999999999997
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.4004
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.14318333333333322
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.40025
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.1433333333333333
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 1.40025
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 1.40025
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 1.40025
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 2.5393198933486014E11 > eta 1394206.9722940854
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 1.40025
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 7
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 1.1611
+new improvement found: sigma_minus: 0.1 with improvement 0.23914999999999997
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 1.1329333333333333
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.26731666666666665
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.1300333333333332
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.27021666666666677
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.1298666666666666
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.2703833333333334
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 1.1298166666666667
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.2704333333333333
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 1.1298166666666667
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 1.1298166666666667
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 2.6178022538085028E11 > eta 1576388.5784451365
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 1.1298166666666667
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 8
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 0.7925333333333333
+new improvement found: sigma_minus: 0.1 with improvement 0.3372833333333334
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 0.7633333333333333
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.3664833333333334
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.7609666666666667
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.36885
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.7606
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.36921666666666664
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 0.7605666666666666
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.3692500000000001
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 0.7605666666666666
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 0.7605666666666666
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 2.6004182355975357E11 > eta 1742491.9334657474
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 0.7605666666666666
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 9
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 0.6261666666666666
+new improvement found: sigma_minus: 0.1 with improvement 0.13439999999999996
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 0.6191666666666666
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.14139999999999997
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.6185
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.14206666666666656
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.61845
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.14211666666666656
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 0.61845
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 0.61845
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 0.61845
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 2.4927763610838367E11 > eta 1891757.7000311306
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 0.61845
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 10
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 0.56885
+new improvement found: sigma_minus: 0.1 with improvement 0.04960000000000009
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 0.5651833333333334
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.053266666666666684
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.5647833333333333
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.05366666666666675
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 0.5647833333333333
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 0.5647833333333333
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 0.5647833333333333
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 0.5647833333333333
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+avg_error_after: 0.5647833333333333
+Sigma_minus: 1.0000000000000005E-8 erfüllt Armijo
+Sigma_plus: 1.0000000000000005E-7 2.3064354275558124E11 > eta 2023549.1151160744
+Sigma_minus: 1.0000000000000005E-8 erfüllt nicht PW
+Sigma_avg: 5.500000000000003E-8 avg_error_after: 0.5647833333333333
+Sigma_minus: 1.0000000000000005E-8 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000005E-7 Sigma_minus: 1.0000000000000005E-8 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-8
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 10 iterations...
+Trainer 1: Iteration 1
+Trainer 1 : started training
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 3.8936166666666665
+new improvement found: sigma_minus: 0.1 with improvement 0.032399999999999984
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 3.8899
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.036116666666666575
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 3.8895166666666667
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.036499999999999755
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 3.8895
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.03651666666666653
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 3.8895
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 3.8895
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 3.8895
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 1.7549086877295883E11 > eta 424986.1288547207
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 3.8895
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 2
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 3.848133333333333
+new improvement found: sigma_minus: 0.1 with improvement 0.041366666666666774
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 3.842783333333333
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.04671666666666674
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 3.842233333333333
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.04726666666666679
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 3.8421833333333333
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.047316666666666674
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 3.8421833333333333
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 3.8421833333333333
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 3.8421833333333333
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 3.352641623960354E11 > eta 837938.9079672094
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 3.8421833333333333
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 3
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 3.7878333333333334
+new improvement found: sigma_minus: 0.1 with improvement 0.0543499999999999
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 3.781633333333333
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.060550000000000104
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 3.7809333333333335
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.061249999999999805
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 3.7809
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.061283333333333356
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 3.780883333333333
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.06130000000000013
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 3.780883333333333
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 3.780883333333333
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+avg_error_after: 3.780883333333333
+Sigma_minus: 1.0000000000000005E-8 erfüllt Armijo
+Sigma_plus: 1.0000000000000005E-7 4.78373180497532E11 > eta 1238073.3007916925
+Sigma_minus: 1.0000000000000005E-8 erfüllt nicht PW
+Sigma_avg: 5.500000000000003E-8 avg_error_after: 3.780883333333333
+Sigma_avg: 5.500000000000003E-8 erfüllt Armijo
+Sigma_minus: 1.0000000000000005E-8 
+1.1630856527978254E12 > eta 1238073.3007916925
+Sigma_minus: 5.500000000000003E-8 erfüllt nicht PW
+Sigma_avg: 7.750000000000004E-8 avg_error_after: 3.780883333333333
+Sigma_avg: 7.750000000000004E-8 erfüllt Armijo
+Sigma_minus: 5.500000000000003E-8 
+1.1630856527647058E12 > eta 1238073.3007916925
+Sigma_minus: 7.750000000000004E-8 erfüllt nicht PW
+Sigma_avg: 8.875000000000005E-8 avg_error_after: 3.780883333333333
+Sigma_avg: 8.875000000000005E-8 erfüllt Armijo
+Sigma_minus: 7.750000000000004E-8 
+1.1630856527267837E12 > eta 1238073.3007916925
+Sigma_minus: 8.875000000000005E-8 erfüllt nicht PW
+Sigma_avg: 9.437500000000005E-8 avg_error_after: 3.780883333333333
+Sigma_avg: 9.437500000000005E-8 erfüllt Armijo
+Sigma_minus: 8.875000000000005E-8 
+1.1630856526864521E12 > eta 1238073.3007916925
+Sigma_minus: 9.437500000000005E-8 erfüllt nicht PW
+Sigma_avg: 9.718750000000005E-8 avg_error_after: 3.780883333333333
+Sigma_avg: 9.718750000000005E-8 erfüllt Armijo
+Sigma_minus: 9.437500000000005E-8 
+1.163085652644915E12 > eta 1238073.3007916925
+Sigma_minus: 9.718750000000005E-8 erfüllt nicht PW
+Sigma_avg: 9.859375000000005E-8 avg_error_after: 3.780883333333333
+Sigma_avg: 9.859375000000005E-8 erfüllt Armijo
+Sigma_minus: 9.718750000000005E-8 
+1.163085652602782E12 > eta 1238073.3007916925
+Sigma_minus: 9.859375000000005E-8 erfüllt nicht PW
+Sigma_avg: 9.929687500000004E-8 avg_error_after: 3.780883333333333
+Sigma_minus: 9.859375000000005E-8 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000005E-7 Sigma_minus: 9.859375000000005E-8 erfüllt PW
+Final(2) Sigma: 9.859375000000005E-8
+Trainer 1: Iteration 4
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 3.70735
+new improvement found: sigma_minus: 0.1 with improvement 0.07353333333333323
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 3.6969
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.0839833333333333
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 3.6956
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.08528333333333293
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 3.695516666666667
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.08536666666666637
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 3.6955
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.08538333333333314
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 3.6955
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 3.6955
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 6.037554608186976E11 > eta 1624495.198586496
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 3.6955
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 5
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 3.4916666666666667
+new improvement found: sigma_minus: 0.1 with improvement 0.2038333333333333
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 3.46225
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.23324999999999996
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 3.4589333333333334
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.2365666666666666
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 3.45875
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.2367499999999998
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 3.4587166666666667
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.23678333333333335
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 3.4587166666666667
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 3.4587166666666667
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 7.102635927217557E11 > eta 1996196.6532154952
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 3.4587166666666667
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 6
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 3.020583333333333
+new improvement found: sigma_minus: 0.1 with improvement 0.4381333333333335
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.9728333333333334
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.4858833333333332
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.9687333333333332
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.48998333333333344
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.9683333333333333
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.4903833333333334
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 2.9683166666666665
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.49040000000000017
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 2.9683166666666665
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 2.9683166666666665
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 7.967242707015897E11 > eta 2352056.1561803804
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 2.9683
+new improvement found: sigma_minus: 1.0000000000000005E-7 with improvement 0.4904166666666665
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 7
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 2.6264333333333334
+new improvement found: sigma_minus: 0.1 with improvement 0.34186666666666676
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.5976666666666666
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.3706333333333336
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.5947
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.37360000000000015
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.5945
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.37380000000000013
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 2.5944833333333333
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.3738166666666669
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 2.5944833333333333
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 2.5944833333333333
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 8.620359933263413E11 > eta 2690849.1386149633
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 2.5944666666666665
+new improvement found: sigma_minus: 1.0000000000000005E-7 with improvement 0.3738333333333337
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 8
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 2.300483333333333
+new improvement found: sigma_minus: 0.1 with improvement 0.29398333333333326
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 2.265416666666667
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.3290499999999996
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.2617333333333334
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.3327333333333331
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 2.261416666666667
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.3330499999999996
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 2.261416666666667
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 2.261416666666667
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 2.261416666666667
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 9.053060780192404E11 > eta 3011271.961624402
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 2.261416666666667
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 9
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 1.7782166666666666
+new improvement found: sigma_minus: 0.1 with improvement 0.4832000000000003
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 1.74135
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.5200666666666669
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.7377
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.5237166666666668
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.7373
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.5241166666666668
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 1.7372333333333334
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.5241833333333334
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 1.7372333333333334
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 1.7372333333333334
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 9.260200371064257E11 > eta 3311982.3639041153
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 1.7372333333333334
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+Trainer 1: Iteration 10
+Powell-Wolfe:
+Sigma: 0.1 avg_error_after: 1.44205
+new improvement found: sigma_minus: 0.1 with improvement 0.29518333333333335
+Sigma_minus: 0.1 erfüllt nicht Armijo
+avg_error_after: 1.4134333333333333
+new improvement found: sigma_minus: 0.010000000000000002 with improvement 0.3238000000000001
+Sigma_minus: 0.010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.4102833333333333
+new improvement found: sigma_minus: 0.0010000000000000002 with improvement 0.3269500000000001
+Sigma_minus: 0.0010000000000000002 erfüllt nicht Armijo
+avg_error_after: 1.4099333333333333
+new improvement found: sigma_minus: 1.0000000000000003E-4 with improvement 0.32730000000000015
+Sigma_minus: 1.0000000000000003E-4 erfüllt nicht Armijo
+avg_error_after: 1.4098833333333334
+new improvement found: sigma_minus: 1.0000000000000004E-5 with improvement 0.32735000000000003
+Sigma_minus: 1.0000000000000004E-5 erfüllt nicht Armijo
+avg_error_after: 1.4098833333333334
+Sigma_minus: 1.0000000000000004E-6 erfüllt nicht Armijo
+avg_error_after: 1.4098833333333334
+Sigma_minus: 1.0000000000000005E-7 erfüllt Armijo
+Sigma_plus: 1.0000000000000004E-6 9.242220301743561E11 > eta 3591657.315764724
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht PW
+Sigma_avg: 5.500000000000002E-7 avg_error_after: 1.4098833333333334
+Sigma_minus: 1.0000000000000005E-7 erfüllt nicht Armijo
+Sigma_plus: 1.0000000000000004E-6 Sigma_minus: 1.0000000000000005E-7 erfüllt PW
+Final(2) Sigma: 1.0000000000000005E-7
+All trainers finished this round
+Trainer 1: avg. error: 5.125358804930395
+Trainer 1: Iteration 1
+Trainer 1: Iteration 2
+Trainer 1: Iteration 1
+Trainer 1: avg. error: 6.791737779167457Trainer 1: Iteration 2
+Trainer 1: avg. error: 6.6502278710915705Trainer 1: Iteration 3
+Trainer 1: avg. error: 6.5052309346668995Trainer 1: Iteration 4
+Trainer 1: avg. error: 6.356613064453794Trainer 1: Iteration 5
+Trainer 1: avg. error: 6.204246469158348Trainer 1: Iteration 6
+Trainer 1: avg. error: 6.048016505443514Trainer 1: Iteration 7
+Trainer 1: avg. error: 5.887830725647557Trainer 1: Iteration 8
+Trainer 1: avg. error: 5.7236301450055835Trainer 1: Iteration 9
+Trainer 1: avg. error: 5.55540407961973Trainer 1: Iteration 10
+Trainer 1: avg. error: 5.38321047437182Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 10 iterations...
+Trainer 1: Iteration 1
+Trainer 1 : started training
+Trainer 1: avg. error: 6.75557603020025Trainer 1: Iteration 2
+Trainer 1: avg. error: 6.489122562710243Trainer 1: Iteration 3
+Trainer 1: avg. error: 6.218760487525129Trainer 1: Iteration 4
+Trainer 1: avg. error: 5.945724589535784Trainer 1: Iteration 5
+Trainer 1: avg. error: 5.67152922009256Trainer 1: Iteration 6
+Trainer 1: avg. error: 5.397950093035558Trainer 1: Iteration 7
+Trainer 1: avg. error: 5.127017179096232Trainer 1: Iteration 8
+Trainer 1: avg. error: 4.860971894906527Trainer 1: Iteration 9
+Trainer 1: avg. error: 4.602181671023728Trainer 1: Iteration 10
+Trainer 1: avg. error: 4.353022841118682All trainers finished this round
+Trainer 1: avg. error: 4.353022841118682
+Trainer 1: Iteration 1
+Trainer 1: Iteration 1
+Trainer 1: avg. error: 6.77368733577251Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer 1: Iteration 1
+Trainer 1 : started training
+Trainer 1: avg. error: 5.083374454261564All trainers finished this round
+Trainer 1: avg. error: 5.083374454261564
+Trainer 1: Iteration 1
+Trainer 1: avg. error: 6.565148361678415The current best NN got defeated.
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 1 iterations...
+Trainer 2 : started training
+Trainer 2: Iteration 1
+Trainer 3 : started training
+Trainer 3: Iteration 1
+Trainer 2: avg. error: 7.669523275671956Trainer 3: avg. error: 8.086391062703408All trainers finished this round
+Trainer 2: avg. error: 7.669523275671956
+Trainer 3: avg. error: 8.086391062703408
+Round elimination starts between 2 Trainers.
+Round over. Now there are 1 Trainers in the tournament.
+Trainer 2 : started training
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer 1 : started training
+All trainers finished this round
+Trainer 1: avg. error: 7.752116999496708
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 1 iterations...
+Trainer 2 : started training
+Trainer 3 : started training
+All trainers finished this round
+Trainer 2: avg. error: 5.691812603552068
+Trainer 3: avg. error: 4.9217481455465
+Round elimination starts between 2 Trainers.
+Round over. Now there are 1 Trainers in the tournament.
+Trainer 3 : started training
+Initial NN gets created and trains for 1 iterations...Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer 1 : started training
+All trainers finished this round
+Trainer 1: avg. error: 5.635596091005554
+Current best NN trained for 1 iterations. New avg. error: 4.213942692477412Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 1 iterations...
+Trainer 2 : started training
+Trainer 3 : started training
+All trainers finished this round
+Trainer 2: avg. error: 7.948782422738718
+Trainer 3: avg. error: 5.1660666027920055
+Round elimination starts between 2 Trainers.
+Round over. Now there are 1 Trainers in the tournament.
+Trainer 3 : started training
+All trainers finished this round
+Current best NN trained for 1 iterations. New avg. error: 3.9786423714376196Generation 2
+4 new NNs got created to find a new competitor
+All 4 Trainers start training for 1 iterations...
+Trainer 4 : started training
+Trainer 5 : started training
+Trainer 6 : started training
+Trainer 7 : started training
+All trainers finished this round
+Trainer 4: avg. error: 6.719420860482703
+Trainer 5: avg. error: 6.061667688397869
+Trainer 6: avg. error: 8.07891201682668
+Trainer 7: avg. error: 6.569530357583114
+Round elimination starts between 4 Trainers.
+Round over. Now there are 2 Trainers in the tournament.
+Trainer 5 : started training
+Trainer 7 : started training
+All trainers finished this round
+Round elimination starts between 2 Trainers.
+Round over. Now there are 1 Trainers in the tournament.
+Trainer 5 : started training
+All trainers finished this round
+Current best NN trained for 1 iterations. New avg. error: 3.7500019885299873Generation 3
+8 new NNs got created to find a new competitor
+All 8 Trainers start training for 1 iterations...
+Trainer 8 : started training
+Trainer 9 : started training
+Trainer 10 : started training
+Trainer 11 : started training
+Trainer 12 : started training
+Trainer 13 : started training
+Trainer 14 : started training
+Trainer 15 : started training
+All trainers finished this round
+Trainer 8: avg. error: 5.21329439842868
+Trainer 9: avg. error: 9.42685583158465
+Trainer 10: avg. error: 5.848397193577894
+Trainer 11: avg. error: 6.986809648864915
+Trainer 12: avg. error: 7.885062545428886
+Trainer 13: avg. error: 5.095238916237388
+Trainer 14: avg. error: 6.464417667090702
+Trainer 15: avg. error: 7.4906623711303935
+Round elimination starts between 8 Trainers.
+Round over. Now there are 4 Trainers in the tournament.
+Trainer 8 : started training
+Trainer 10 : started training
+Trainer 13 : started training
+Trainer 14 : started training
+All trainers finished this round
+Round elimination starts between 4 Trainers.
+Round over. Now there are 2 Trainers in the tournament.
+Trainer 8 : started training
+Trainer 13 : started training
+All trainers finished this round
+Round elimination starts between 2 Trainers.
+Round over. Now there are 1 Trainers in the tournament.
+Trainer 13 : started training
+All trainers finished this round
+Current best NN trained for 1 iterations. New avg. error: 3.7500019885299873Generation 4
+16 new NNs got created to find a new competitor
+All 16 Trainers start training for 1 iterations...
+Trainer 16 : started training
+Trainer 17 : started training
+Trainer 18 : started training
+Trainer 19 : started training
+Trainer 20 : started training
+Trainer 21 : started training
+Trainer 22 : started training
+Trainer 23 : started training
+Trainer 24 : started training
+Trainer 25 : started training
+Trainer 26 : started training
+Trainer 27 : started training
+Trainer 28 : started training
+Trainer 29 : started training
+Trainer 30 : started training
+Trainer 31 : started training
+All trainers finished this round
+Trainer 16: avg. error: 6.285519585451082
+Trainer 17: avg. error: 7.333817319375005
+Trainer 18: avg. error: 8.085531637497182
+Trainer 19: avg. error: 5.071317317320916
+Trainer 20: avg. error: 6.38170028516828
+Trainer 21: avg. error: 8.201301876211534
+Trainer 22: avg. error: 7.3771944344341165
+Trainer 23: avg. error: 8.152876834267412
+Trainer 24: avg. error: 7.2484205639188035
+Trainer 25: avg. error: 6.231693609400241
+Trainer 26: avg. error: 6.763753479357034
+Trainer 27: avg. error: 6.896855517824512
+Trainer 28: avg. error: 7.878309172471348
+Trainer 29: avg. error: 7.835489060708841
+Trainer 30: avg. error: 5.933925867982241
+Trainer 31: avg. error: 5.329594388903421
+Round elimination starts between 16 Trainers.
+Round over. Now there are 8 Trainers in the tournament.
+Trainer 16 : started training
+Trainer 19 : started training
+Trainer 20 : started training
+Trainer 22 : started training
+Trainer 25 : started training
+Trainer 26 : started training
+Trainer 29 : started training
+Trainer 31 : started training
+All trainers finished this round
+Round elimination starts between 8 Trainers.
+Round over. Now there are 4 Trainers in the tournament.
+New Run started
+Initial NN gets created and trains for 1 iterations
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer 1 : started training
+All trainers finished this round
+Trainer 1: avg. error: 5.055258171105862
+Current best NN trained for 1 iterations. New avg. error: 5.28635195755988
+The current best NN got defeated.
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 1 iterations...
+Trainer 2 : started training
+Trainer 3 : started training
+New Run started
+Initial NN gets created and trains for 1 iterationsNew Run started
+New Run started
+Initial NN gets created and trains for 1 iterationsNew Run started
+Initial NN gets created and trains for 1 iterationsNew Run started
+Initial NN gets created and trains for 1 iterationsNew Run started
+Initial NN gets created and trains for 1 iterations
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer 1: started training for 1 iterations
+All trainers finished this round
+Trainer 1: avg. error: 7.521520281077565
+Current best NN trained for 1 iterations - New avg. error: 5.643621060737887
+Current best NN defended its position
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 1 iterations...
+Trainer 2: started training for 1 iterations
+Trainer 3: started training for 1 iterations
+All trainers finished this round
+Trainer 2: avg. error: 6.527461101126606
+Trainer 3: avg. error: 4.384584768085206
+Round elimination starts between 2 Trainers: Round elimination starts between 2 Trainers: 2,,3
+Trainer 2 started training for 1 iterations
+Trainer 3 started training for 1 iterations
+Trainer 3 is the winner of its group (0,1, ) with avg. error: 3
+Round over - Now there are 1 Trainers in the tournament
+Trainer 3: started training for 1 iterations
+All trainers finished this round
+Trainer 3: avg. error: 4.04363845343363
+Current best NN trained for 1 iterations - New avg. error: 5.4444565554402935
+The current best NN got defeated by Trainer 3
+Generation 2
+4 new NNs got created to find a new competitor
+All 4 Trainers start training for 1 iterations...
+Trainer 4: started training for 1 iterations
+Trainer 5: started training for 1 iterations
+Trainer 6: started training for 1 iterations
+Trainer 7: started training for 1 iterations
+All trainers finished this round
+Trainer 4: avg. error: 6.300589865385032
+Trainer 5: avg. error: 5.600633803154146
+Trainer 6: avg. error: 4.644701008612778
+Trainer 7: avg. error: 5.164690880895531
+Round elimination starts between 4 Trainers: Round elimination starts between 4 Trainers: 4,,5,6,7
+Trainer 4 started training for 1 iterations
+Trainer 5 started training for 1 iterations
+Trainer 6 started training for 1 iterations
+Trainer 7 started training for 1 iterations
+Trainer 5 is the winner of its group (0,1, ) with avg. error: 5
+Trainer 6 is the winner of its group (2,3, ) with avg. error: 6
+Round over - Now there are 2 Trainers in the tournament
+New Run started
+Initial NN gets created and trains for 1 iterations
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer 1: started training for 1 iterations
+All trainers finished this round
+Trainer 1: avg. error: 5.631310792081463
+Current best NN trained for 1 iterations - New avg. error: 7.808189957655981
+The current best NN got defeated by Trainer 1
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 1 iterations...
+Trainer 2: started training for 1 iterations
+Trainer 3: started training for 1 iterations
+New Run started
+Initial NN gets created and trains for 1 iterations
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer Trainer1: started training for 1 iterations
+New Run started
+Initial NN gets created and trains for 1 iterations
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer Trainer1: started training for 1 iterations
+All trainers finished this round
+Trainer 1: avg. error: 20.0
+Current best NN trained for 1 iterations - New avg. error: 20.0
+Current best NN defended its position
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 1 iterations...
+Trainer Trainer2: started training for 1 iterations
+Trainer Trainer3: started training for 1 iterations
+All trainers finished this round
+Trainer 2: avg. error: 20.0
+Trainer 3: avg. error: 20.0
+Round elimination starts between 2 Trainers: Round elimination starts between 2 Trainers: 2,3
+New Run started
+Initial NN gets created and trains for 1 iterations
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer Trainer1: started training for 1 iterations
+All trainers finished this round
+Trainer 1: avg. error: 7.5060214764446815
+Current best NN trained for 1 iterations - New avg. error: 4.5309078468315365
+Current best NN defended its position
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 1 iterations...
+Trainer Trainer2: started training for 1 iterations
+Trainer Trainer3: started training for 1 iterations
+All trainers finished this round
+Trainer 2: avg. error: 5.8896730571941145
+Trainer 3: avg. error: 5.230449894258074
+Round elimination starts between 2 Trainers: Round elimination starts between 2 Trainers: 2,3
+Trainer 2 started training for 1 iterations
+Trainer 3 started training for 1 iterations
+Trainer 3 is the winner of its group (0,1 ) with avg. error: 3
+Round over - Now there are 1 Trainers in the tournament
+Trainer Trainer3: started training for 1 iterations
+All trainers finished this round
+Trainer 3: avg. error: 4.808161435683042
+Current best NN trained for 1 iterations - New avg. error: 4.35731934719386
+Current best NN defended its position
+Generation 2
+4 new NNs got created to find a new competitor
+All 4 Trainers start training for 1 iterations...
+Trainer Trainer4: started training for 1 iterations
+Trainer Trainer5: started training for 1 iterations
+Trainer Trainer6: started training for 1 iterations
+Trainer Trainer7: started training for 1 iterations
+All trainers finished this round
+Trainer 4: avg. error: 7.199111900993835
+Trainer 5: avg. error: 6.055250945062632
+Trainer 6: avg. error: 8.22906260969264
+Trainer 7: avg. error: 9.020752088724334
+Round elimination starts between 4 Trainers: Round elimination starts between 4 Trainers: 4,5,6,7
+Trainer 4 started training for 1 iterations
+Trainer 5 started training for 1 iterations
+Trainer 6 started training for 1 iterations
+Trainer 7 started training for 1 iterations
+Trainer 5 is the winner of its group (0,1 ) with avg. error: 5
+Trainer 6 is the winner of its group (2,3 ) with avg. error: 6
+Round over - Now there are 2 Trainers in the tournament
+Trainer Trainer5: started training for 1 iterations
+Trainer Trainer6: started training for 1 iterations
+All trainers finished this round
+Trainer 5: avg. error: 5.7127672382731
+Trainer 6: avg. error: 7.890470781541575
+Round elimination starts between 2 Trainers: Round elimination starts between 2 Trainers: 5,6
+Trainer 5 started training for 1 iterations
+Trainer 6 started training for 1 iterations
+Trainer 5 is the winner of its group (0,1 ) with avg. error: 5
+Round over - Now there are 1 Trainers in the tournament
+Trainer Trainer5: started training for 1 iterations
+All trainers finished this round
+Trainer 5: avg. error: 5.3473519348972856
+Current best NN trained for 1 iterations - New avg. error: 4.184338266199484
+Current best NN defended its position
+Generation 3
+8 new NNs got created to find a new competitor
+All 8 Trainers start training for 1 iterations...
+Trainer Trainer8: started training for 1 iterations
+Trainer Trainer9: started training for 1 iterations
+Trainer Trainer10: started training for 1 iterations
+Trainer Trainer11: started training for 1 iterations
+Trainer Trainer12: started training for 1 iterations
+Trainer Trainer13: started training for 1 iterations
+Trainer Trainer14: started training for 1 iterations
+Trainer Trainer15: started training for 1 iterations
+All trainers finished this round
+Trainer 8: avg. error: 6.281710262569663
+Trainer 9: avg. error: 5.243180750116013
+Trainer 10: avg. error: 5.710495693354825
+Trainer 11: avg. error: 7.598186773604302
+Trainer 12: avg. error: 6.272916638878015
+Trainer 13: avg. error: 4.457781540199653
+Trainer 14: avg. error: 5.447794125640921
+Trainer 15: avg. error: 7.681639621347228
+Round elimination starts between 8 Trainers: Round elimination starts between 8 Trainers: 8,9,10,11,12,13,14,15
+Trainer 8 started training for 1 iterations
+New Run started
+Initial NN gets created and trains for 1 iterations
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer Trainer1: started training for 1 iterations
+All trainers finished this round
+Trainer 1: avg. error: 6.369861438825215
+Current best NN trained for 1 iterations - New avg. error: 6.746563674531466
+The current best NN got defeated by Trainer 1
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 1 iterations...
+Trainer Trainer2: started training for 1 iterations
+Trainer Trainer3: started training for 1 iterations
+All trainers finished this round
+Trainer 2: avg. error: 6.486841934845077
+Trainer 3: avg. error: 7.286496960816287
+Round elimination starts between 2 Trainers: Round elimination starts between 2 Trainers: 2,3
+Trainer 2 started training for 1 iterations
+Trainer 3 started training for 1 iterations
+Trainer 2 is the winner of its group (0,1) with avg. error: 6.314070466221221
+Round over - Now there are 1 Trainers in the tournament
+Trainer 2: started training for 1 iterations
+All trainers finished this round
+Trainer 2: avg. error: 6.137451239118104
+Current best NN trained for 1 iterations - New avg. error: 6.171701504772041
+The current best NN got defeated by Trainer 2
+Generation 2
+4 new NNs got created to find a new competitor
+All 4 Trainers start training for 1 iterations...
+Trainer Trainer4: started training for 1 iterations
+Trainer Trainer5: started training for 1 iterations
+Trainer Trainer6: started training for 1 iterations
+Trainer Trainer7: started training for 1 iterations
+All trainers finished this round
+Trainer 4: avg. error: 5.048932517369683
+Trainer 5: avg. error: 4.184268019131135
+Trainer 6: avg. error: 8.388967832299171
+Trainer 7: avg. error: 6.85064790183671
+Round elimination starts between 4 Trainers: Round elimination starts between 4 Trainers: 4,5,6,7
+Trainer 4 started training for 1 iterations
+New Run started
+Initial NN gets created and trains for 1 iterations
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 1 iterations...
+Trainer Trainer1: started training for 1 iterations
+All trainers finished this round
+Trainer 1: avg. error: 6.672492930662026
+Current best NN trained for 1 iterations - New avg. error: 6.151272550021878
+Current best NN defended its position
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 1 iterations...
+Trainer Trainer2: started training for 1 iterations
+Trainer Trainer3: started training for 1 iterations
+All trainers finished this round
+Trainer 2: avg. error: 5.978762638061836
+Trainer 3: avg. error: 6.478656887553005
+Round elimination starts between 2 Trainers: Round elimination starts between 2 Trainers: 2,3
+Trainer 2 started training for 1 iterations
+Trainer 3 started training for 1 iterations
+Trainer 2 is the winner of its group (2,3) with avg. error: 5.824233741962641
+Round over - Now there are 1 Trainers in the tournament
+Trainer 2: started training for 1 iterations
+All trainers finished this round
+Trainer 2: avg. error: 5.667023835196433
+Current best NN trained for 1 iterations - New avg. error: 6.055259201112449
+The current best NN got defeated by Trainer 2
+Generation 2
+4 new NNs got created to find a new competitor
+All 4 Trainers start training for 1 iterations...
+Trainer Trainer4: started training for 1 iterations
+Trainer Trainer5: started training for 1 iterations
+Trainer Trainer6: started training for 1 iterations
+Trainer Trainer7: started training for 1 iterations
+All trainers finished this round
+Trainer 4: avg. error: 5.870406782692439
+Trainer 5: avg. error: 8.114290458053386
+Trainer 6: avg. error: 6.009866528248846
+Trainer 7: avg. error: 7.602536104908312
+Round elimination starts between 4 Trainers: Round elimination starts between 4 Trainers: 4,5,6,7
+Trainer 4 started training for 1 iterations
+Trainer 5 started training for 1 iterations
+Trainer 6 started training for 1 iterations
+New Run started
+New Run started
+Initial NN gets created and trains for 2 iterations
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 2 iterations...
+Trainer 1: started training for 2 iterations
+All trainers finished this round
+Trainer 1: avg. error: 6.819847133613331
+New Run started
+Initial NN gets created and trains for 2 iterationsTrainer CurrentBest: Iteration 1
+Trainer CurrentBest: Iteration 2
+
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 2 iterations...
+Trainer Trainer1: Iteration 1
+Trainer 1: started training for 2 iterations
+New Run started
+Initial NN gets created and trains for 2 iterationsTrainer CurrentBest: Iteration 1
+Trainer CurrentBest: Iteration 2
+
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 2 iterations...
+Trainer 1: starts training for 2 iterations
+Trainer Trainer1: Iteration 1
+Trainer Trainer1: Iteration 2
+New Run started
+Initial NN gets created and trains for 2 iterationsCurrentBest: Iteration 1
+CurrentBest: Iteration 2
+
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 2 iterations...
+Trainer 1: starts training for 2 iterations
+Trainer 1: Iteration 1
+Trainer 1: Iteration 2
+All trainers finished this round
+Trainer 1: avg. error: 7.4198731772040345
+CurrentBest: Iteration 1
+CurrentBest: Iteration 2
+Current best NN trained for 2 iterations - New avg. error: 4.921151895094279
+Current best NN defended its position
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 2 iterations...
+Trainer 2: starts training for 2 iterations
+Trainer 2: Iteration 1
+Trainer 3: starts training for 2 iterations
+Trainer 3: Iteration 1
+Trainer 3: Iteration 2
+Trainer 2: Iteration 2
+All trainers finished this round
+Trainer 2: avg. error: 6.183505297291552
+Trainer 3: avg. error: 4.384073363674249
+Round elimination starts between 2 Trainers: Round elimination starts between 2 Trainers: 2,3
+Trainer 2 starts training for 2 iterations
+Trainer 2: Iteration 1
+Trainer 2: Iteration 2
+Trainer 3 starts training for 2 iterations
+Trainer 3: Iteration 1
+New Run started
+Initial NN gets created and trains for 2 iterationsCurrentBest: Iteration 1
+CurrentBest: Iteration 2
+New Run started
+Initial NN gets created and trains for 2 iterations
+Generation 0
+1 new NNs got created to find a new competitor
+CurrentBest: Iteration 1
+All 1 Trainers start training for 2 iterations...
+Trainer 1: starts training for 2 iterations
+All trainers finished this round
+Trainer 1: avg. error: 20.0
+CurrentBest: Iteration 1
+New Run started
+New Run started
+Initial NN gets created and trains for 2 iterationsCurrentBest: Iteration 1
+New Run started
+Initial NN gets created and trains for 2 iterationsCurrentBest: Iteration 1
+CurrentBest: Iteration 2
+
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 2 iterations...
+Trainer 1: starts training for 2 iterations
+All trainers finished this round
+Trainer 1: avg. error: 20.0
+Current best NN trained for 2 iterations - New avg. error: 6.294020242925675
+Current best NN defended its position
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 2 iterations...
+Trainer 2: starts training for 2 iterations
+Trainer 3: starts training for 2 iterations
+All trainers finished this round
+Trainer 2: avg. error: 20.0
+Trainer 3: avg. error: 20.0
+Round elimination starts between 2 Trainers: Round elimination starts between 2 Trainers: 2,3
+Trainer 2 starts training for 2 iterations
+Trainer 3 starts training for 2 iterations
+Trainer 2 is the winner of its group (2,3) with avg. error: 20.0
+Round over - Now there are 1 Trainers in the tournament
+Trainer 2: Iteration 1
+New Run started
+Initial NN gets created and trains for 2 iterationsCurrentBest: Iteration 1
+CurrentBest: Iteration 2
+
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 2 iterations...
+Trainer 1: starts training for 2 iterations
+All trainers finished this round
+Trainer 1: avg. error: 20.0
+New Run started
+Initial NN gets created and trains for 2 iterationsCurrentBest: Iteration 1
+CurrentBest: Iteration 2
+
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 2 iterations...
+Trainer 1: starts training for 2 iterations
+All trainers finished this round
+Trainer 1: avg. error: 20.0
+Current best NN trained for 2 iterations - New avg. error: 5.2309304823781355
+Current best NN defended its position
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 2 iterations...
+Trainer 2: starts training for 2 iterations
+Trainer 3: starts training for 2 iterations
+All trainers finished this round
+Trainer 2: avg. error: 20.0
+Trainer 3: avg. error: 20.0
+Round elimination starts between 2 Trainers: Round elimination starts between 2 Trainers: 2,3
+Trainer 2 starts training for 2 iterations
+New Run started
+Initial NN gets created and trains for 2 iterationsCurrentBest: Iteration 1
+CurrentBest: Iteration 2
+
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 2 iterations...
+Trainer 1: starts training for 2 iterations
+All trainers finished this round
+Trainer 1: avg. error: 20.0
+Current best NN trained for 2 iterations - New avg. error: 6.141369332984574
+Current best NN defended its position
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 2 iterations...
+Trainer 2: starts training for 2 iterations
+Trainer 3: starts training for 2 iterations
+All trainers finished this round
+Trainer 2: avg. error: 20.0
+Trainer 3: avg. error: 20.0
+Round elimination starts between 2 Trainers: Round elimination starts between 2 Trainers: 2,3
+Trainer 2 starts training for 2 iterations
+Trainer 3 starts training for 2 iterations
+Trainer 2 is the winner of its group (2,3) with avg. error: 20.0
+Round over - Now there are 1 Trainers in the tournament
+Trainer 2: Iteration 1
+Trainer 2: started training for 2 iterations
+Trainer 2: Iteration 2
+All trainers finished this round
+Trainer 2: avg. error: 7.010145092696838
+Current best NN trained for 2 iterations - New avg. error: 6.141369332984574
+Current best NN defended its position
+Generation 2
+4 new NNs got created to find a new competitor
+All 4 Trainers start training for 2 iterations...
+Trainer 4: starts training for 2 iterations
+Trainer 5: starts training for 2 iterations
+Trainer 6: starts training for 2 iterations
+Trainer 7: starts training for 2 iterations
+All trainers finished this round
+Trainer 4: avg. error: 20.0
+Trainer 5: avg. error: 20.0
+Trainer 6: avg. error: 20.0
+Trainer 7: avg. error: 20.0
+Round elimination starts between 4 Trainers: Round elimination starts between 4 Trainers: 4,5,6,7
+Trainer 4 starts training for 2 iterations
+Trainer 5 starts training for 2 iterations
+Trainer 6 starts training for 2 iterations
+Trainer 7 starts training for 2 iterations
+Trainer 4 is the winner of its group (4,5) with avg. error: 20.0
+Trainer 6 is the winner of its group (6,7) with avg. error: 20.0
+Round over - Now there are 2 Trainers in the tournament
+Trainer 4: started training for 2 iterations
+Trainer 6: started training for 2 iterations
+Trainer 4: Iteration 1
+Trainer 6: Iteration 1
+New Run started
+Initial NN gets created and trains for 2 iterationsCurrentBest: Iteration 1
+CurrentBest: Iteration 2
+
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 2 iterations...
+Trainer 1: starts training for 2 iterations
+All trainers finished this round
+Trainer 1: avg. error: 20.0
+Current best NN trained for 2 iterations - New avg. error: 3.954947470699257
+Current best NN defended its position
+Generation 1
+2 new NNs got created to find a new competitor
+All 2 Trainers start training for 2 iterations...
+Trainer 2: starts training for 2 iterations
+Trainer 3: starts training for 2 iterations
+All trainers finished this round
+Trainer 2: avg. error: 20.0
+Trainer 3: avg. error: 20.0
+Round elimination starts between 2 Trainers: Round elimination starts between 2 Trainers: 2,3
+Trainer 2 starts training for 2 iterations
+Trainer 3 starts training for 2 iterations
+Trainer 2 is the winner of its group (2,3) with avg. error: 20.0
+Round over - Now there are 1 Trainers in the tournament
+Trainer 2: Iteration 1
+Trainer 2: started training for 2 iterations
+Trainer 2: Iteration 2
+All trainers finished this round
+Trainer 2: avg. error: 4.238812511703393
+Current best NN trained for 2 iterations - New avg. error: 3.954947470699257
+Current best NN defended its position
+Generation 2
+4 new NNs got created to find a new competitor
+All 4 Trainers start training for 2 iterations...
+Trainer 4: starts training for 2 iterations
+Trainer 5: starts training for 2 iterations
+Trainer 6: starts training for 2 iterations
+Trainer 7: starts training for 2 iterations
+All trainers finished this round
+Trainer 4: avg. error: 20.0
+Trainer 5: avg. error: 20.0
+Trainer 6: avg. error: 20.0
+Trainer 7: avg. error: 20.0
+Round elimination starts between 4 Trainers: Round elimination starts between 4 Trainers: 4,5,6,7
+Trainer 4 starts training for 2 iterations
+Trainer 5 starts training for 2 iterations
+Trainer 6 starts training for 2 iterations
+Trainer 7 starts training for 2 iterations
+Trainer 4 is the winner of its group (4,5) with avg. error: 20.0
+Trainer 6 is the winner of its group (6,7) with avg. error: 20.0
+Round over - Now there are 2 Trainers in the tournament
+Trainer 4: started training for 2 iterations
+Trainer 4: Iteration 1
+Trainer 6: started training for 2 iterations
+Trainer 6: Iteration 1
+Trainer 4: Iteration 2
+Trainer 6: Iteration 2
+All trainers finished this round
+Trainer 4: avg. error: 6.211376213350115
+Trainer 6: avg. error: 8.599373432578835
+Round elimination starts between 2 Trainers: Round elimination starts between 2 Trainers: 4,6
+Trainer 4 starts training for 2 iterations
+Trainer 6 starts training for 2 iterations
+Trainer 4 is the winner of its group (4,6) with avg. error: 6.211376213350115
+Round over - Now there are 1 Trainers in the tournament
+Trainer 4: started training for 2 iterations
+Trainer 4: Iteration 1
+Trainer 4: Iteration 2
+All trainers finished this round
+Trainer 4: avg. error: 5.73855723944686
+Current best NN trained for 2 iterations - New avg. error: 3.954947470699257
+Current best NN defended its position
+Generation 3
+8 new NNs got created to find a new competitor
+All 8 Trainers start training for 2 iterations...
+Trainer 8: starts training for 2 iterations
+Trainer 9: starts training for 2 iterations
+Trainer 10: starts training for 2 iterations
+Trainer 11: starts training for 2 iterations
+Trainer 12: starts training for 2 iterations
+Trainer 13: starts training for 2 iterations
+Trainer 14: starts training for 2 iterations
+Trainer 15: starts training for 2 iterations
+All trainers finished this round
+Trainer 8: avg. error: 20.0
+Trainer 9: avg. error: 20.0
+Trainer 10: avg. error: 20.0
+Trainer 11: avg. error: 20.0
+Trainer 12: avg. error: 20.0
+Trainer 13: avg. error: 20.0
+Trainer 14: avg. error: 20.0
+Trainer 15: avg. error: 20.0
+Round elimination starts between 8 Trainers: Round elimination starts between 8 Trainers: 8,9,10,11,12,13,14,15
+Trainer 8 starts training for 2 iterations
+Trainer 9 starts training for 2 iterations
+Trainer 10 starts training for 2 iterations
+Trainer 11 starts training for 2 iterations
+Trainer 12 starts training for 2 iterations
+Trainer 13 starts training for 2 iterations
+Trainer 14 starts training for 2 iterations
+Trainer 15 starts training for 2 iterations
+Trainer 8 is the winner of its group (8,9) with avg. error: 20.0
+Trainer 10 is the winner of its group (10,11) with avg. error: 20.0
+Trainer 12 is the winner of its group (12,13) with avg. error: 20.0
+Trainer 14 is the winner of its group (14,15) with avg. error: 20.0
+Round over - Now there are 4 Trainers in the tournament
+Trainer 8: started training for 2 iterations
+Trainer 8: Iteration 1
+Trainer 10: started training for 2 iterations
+Trainer 10: Iteration 1
+Trainer 12: started training for 2 iterations
+Trainer 12: Iteration 1
+Trainer 14: started training for 2 iterations
+Trainer 14: Iteration 1
+Trainer 10: Iteration 2
+Trainer 8: Iteration 2
+Trainer 12: Iteration 2
+Trainer 14: Iteration 2
+All trainers finished this round
+Trainer 8: avg. error: 6.09381510658985
+Trainer 10: avg. error: 5.27313832991779
+Trainer 12: avg. error: 6.39239329089739
+Trainer 14: avg. error: 8.092541387028813
+Round elimination starts between 4 Trainers: Round elimination starts between 4 Trainers: 8,10,12,14
+Trainer 8 starts training for 2 iterations
+Trainer 10 starts training for 2 iterations
+Trainer 12 starts training for 2 iterations
+Trainer 14 starts training for 2 iterations
+Trainer 8 is the winner of its group (8,10) with avg. error: 6.09381510658985
+Trainer 12 is the winner of its group (12,14) with avg. error: 6.39239329089739
+Round over - Now there are 2 Trainers in the tournament
+Trainer 8: started training for 2 iterations
+Trainer 8: Iteration 1
+Trainer 12: started training for 2 iterations
+Trainer 12: Iteration 1
+Trainer 12: Iteration 2
+Trainer 8: Iteration 2
+All trainers finished this round
+Trainer 8: avg. error: 5.785954659835543
+Trainer 12: avg. error: 5.883123137627998
+Round elimination starts between 2 Trainers: Round elimination starts between 2 Trainers: 8,12
+Trainer 8 starts training for 2 iterations
+Trainer 12 starts training for 2 iterations
+Trainer 8 is the winner of its group (8,12) with avg. error: 5.785954659835543
+Round over - Now there are 1 Trainers in the tournament
+Trainer 8: started training for 2 iterations
+Trainer 8: Iteration 1
+Trainer 8: Iteration 2
+All trainers finished this round
+Trainer 8: avg. error: 5.469660729362362
+Current best NN trained for 2 iterations - New avg. error: 3.954947470699257
+Current best NN defended its position
+Generation 4
+16 new NNs got created to find a new competitor
+All 16 Trainers start training for 2 iterations...
+Trainer 16: starts training for 2 iterations
+Trainer 17: starts training for 2 iterations
+Trainer 18: starts training for 2 iterations
+Trainer 19: starts training for 2 iterations
+Trainer 20: starts training for 2 iterations
+Trainer 21: starts training for 2 iterations
+Trainer 22: starts training for 2 iterations
+Trainer 23: starts training for 2 iterations
+Trainer 24: starts training for 2 iterations
+Trainer 25: starts training for 2 iterations
+Trainer 26: starts training for 2 iterations
+Trainer 27: starts training for 2 iterations
+Trainer 28: starts training for 2 iterations
+Trainer 29: starts training for 2 iterations
+Trainer 30: starts training for 2 iterations
+Trainer 31: starts training for 2 iterations
+All trainers finished this round
+Trainer 16: avg. error: 20.0
+Trainer 17: avg. error: 20.0
+Trainer 18: avg. error: 20.0
+Trainer 19: avg. error: 20.0
+Trainer 20: avg. error: 20.0
+Trainer 21: avg. error: 20.0
+Trainer 22: avg. error: 20.0
+Trainer 23: avg. error: 20.0
+Trainer 24: avg. error: 20.0
+Trainer 25: avg. error: 20.0
+Trainer 26: avg. error: 20.0
+Trainer 27: avg. error: 20.0
+Trainer 28: avg. error: 20.0
+Trainer 29: avg. error: 20.0
+Trainer 30: avg. error: 20.0
+Trainer 31: avg. error: 20.0
+Round elimination starts between 16 Trainers: Round elimination starts between 16 Trainers: 16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31
+Trainer 16 starts training for 2 iterations
+Trainer 17 starts training for 2 iterations
+Trainer 18 starts training for 2 iterations
+Trainer 19 starts training for 2 iterations
+Trainer 20 starts training for 2 iterations
+Trainer 21 starts training for 2 iterations
+Trainer 22 starts training for 2 iterations
+Trainer 23 starts training for 2 iterations
+Trainer 24 starts training for 2 iterations
+Trainer 25 starts training for 2 iterations
+Trainer 26 starts training for 2 iterations
+Trainer 27 starts training for 2 iterations
+Trainer 28 starts training for 2 iterations
+Trainer 29 starts training for 2 iterations
+Trainer 30 starts training for 2 iterations
+Trainer 31 starts training for 2 iterations
+Trainer 16 is the winner of its group (16,17) with avg. error: 20.0
+Trainer 18 is the winner of its group (18,19) with avg. error: 20.0
+Trainer 20 is the winner of its group (20,21) with avg. error: 20.0
+Trainer 22 is the winner of its group (22,23) with avg. error: 20.0
+Trainer 24 is the winner of its group (24,25) with avg. error: 20.0
+Trainer 26 is the winner of its group (26,27) with avg. error: 20.0
+Trainer 28 is the winner of its group (28,29) with avg. error: 20.0
+Trainer 30 is the winner of its group (30,31) with avg. error: 20.0
+Round over - Now there are 8 Trainers in the tournament
+Trainer 16: started training for 2 iterations
+Trainer 16: Iteration 1
+Trainer 18: started training for 2 iterations
+Trainer 18: Iteration 1
+Trainer 20: started training for 2 iterations
+Trainer 20: Iteration 1
+Trainer 22: started training for 2 iterations
+Trainer 22: Iteration 1
+Trainer 24: started training for 2 iterations
+Trainer 24: Iteration 1
+Trainer 26: started training for 2 iterations
+Trainer 26: Iteration 1
+Trainer 28: started training for 2 iterations
+Trainer 30: started training for 2 iterations
+Trainer 28: Iteration 1
+Trainer 30: Iteration 1
+Trainer 16: Iteration 2
+Trainer 22: Iteration 2
+Trainer 24: Iteration 2
+Trainer 30: Iteration 2
+Trainer 20: Iteration 2
+Trainer 18: Iteration 2
+Trainer 28: Iteration 2
+Trainer 26: Iteration 2
+New Run started
+Initial NN gets created and trains for 2 iterationsCurrentBest: Iteration 1
+CurrentBest: Iteration 2
+New Run started
+Initial NN gets created and trains for 2 iterationsCurrentBest: Iteration 1
+CurrentBest: Iteration 2
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 2 iterations...
+Trainer 1: starts training for 2 iterations
+All trainers finished this round
+Trainer 1: avg. error: 20.0
+New Run started
+Initial NN gets created and trains for 2 iterationsCurrentBest: Iteration 1
+CurrentBest: Iteration 2
+Generation 0
+1 new NNs got created to find a new competitor
+All 1 Trainers start training for 2 iterations...
+Trainer 1: starts training for 2 iterations
+Trainer 1: Iteration 1
+Trainer 1: Iteration 2
+All trainers finished this round
+Trainer 1: avg. error: 4.825353634848667
+CurrentBest: Iteration 1
