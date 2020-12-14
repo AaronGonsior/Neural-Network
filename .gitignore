@@ -2,3 +2,4 @@
 *.png
 old logs/
 digits/Trainingdata/
+out/
