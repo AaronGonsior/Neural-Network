@@ -82,8 +82,9 @@ public class NetworkDrawer extends Canvas implements Runnable{
             for(int i = 0 ; i < layerdims[layer] ; i++){
                 if(layer == 1){
 
-                    File file = new File(basepath + "\\single_test\\weights\\weightsmap" + i + "_layerc_0.jpg");
                     try {
+                        File file = new File(basepath + "\\single_test\\weights\\weightsmap" + i + "_layerc_0.jpg");
+
                         Image img = ImageIO.read(file);
                         g.drawImage(img,
                                 width/5-width/13-img_size/2,
