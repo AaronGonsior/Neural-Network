@@ -1,3 +1,4 @@
+import javax.imageio.IIOException;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -90,6 +91,8 @@ public class NetworkDrawer extends Canvas implements Runnable{
                                 width/5-width/13-img_size/2,
                                 (i+1) * height/(layerdims[layer]+1) - img_size/2,
                                 img_size,img_size, null);
+                    } catch(IIOException e){
+                        System.out.println("Error in drawing");
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

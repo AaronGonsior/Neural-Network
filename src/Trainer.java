@@ -88,7 +88,7 @@ public class Trainer {
             this.avg_error = nn.averageError;
             this.best_bet_accuracy = nn.best_bet_accuracy;
 
-            sigma = 1;
+            sigma = 0.1;
             Function.print_n_log("Caution: sigma is constant! (" + sigma + ")",log_continue);
 
             /*

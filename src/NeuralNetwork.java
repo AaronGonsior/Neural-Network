@@ -286,11 +286,14 @@ public class NeuralNetwork {
             clearActivation();
             out = propagate(idxReader.data[img]);
 
+            /*
             for (int i = 0; i < out.length; i++) {
                 //error[i] = Function.error(out[i], idxReader.labels[img][i]) * Function.squish_prime(layers[layers.length - 1].nodes[i].getActivation());
-                errors[img][i] = Function.error(out[i], idxReader.labels[img][i]) * Function.squish_prime(layers[layers.length - 1].nodes[i].getActivation());
-                errortotal += Math.abs(errors[img][i]);
+                //errors[img][i] = Function.error(out[i], idxReader.labels[img][i]) * Function.squish_prime(layers[layers.length - 1].nodes[i].getActivation());
+                errors[img][i] = Function.error(out[i], idxReader.labels[img][i]);
+                //errortotal += Math.abs(errors[img][i]);
             }
+             */
 
 
             best_bet_index = 0;
@@ -349,7 +352,6 @@ public class NeuralNetwork {
             }
              */
 
-            //backprop(error);
             gradient_weights.reset();
             gradient_biases.reset();
             for(int i = 0 ; i < error.length ; i++){
@@ -361,8 +363,6 @@ public class NeuralNetwork {
             }
 
         }
-
-        //setAverageError(errortotal / data.length);
 
     }
 
@@ -394,13 +394,13 @@ public class NeuralNetwork {
         //double[] newbiases;
 
         // !
-        //grad_weights = gradient_weights.getNormedGradient();
+        grad_weights = gradient_weights.getNormedGradient();
         //grad_weights = gradient_weights.getGradient();
-        grad_weights = gradient_weights.getAvgGradient();
+        //grad_weights = gradient_weights.getAvgGradient();
 
-        //grad_biases = gradient_biases.getNormedGradient();
+        grad_biases = gradient_biases.getNormedGradient();
         //grad_biases = gradient_biases.getGradient();
-        grad_biases = gradient_biases.getAvgGradient();
+        //grad_biases = gradient_biases.getAvgGradient();
 
 
         partial = 0;
