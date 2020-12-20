@@ -10,6 +10,7 @@ public class GrayscaleImage {
 
     public GrayscaleImage(double[][] image){
         this.image = image;
+        size = image[0].length;
     }
 
     public GrayscaleImage(double[] image, String scale) throws Exception {

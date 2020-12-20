@@ -1,3 +1,6 @@
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -7,9 +10,10 @@ public class IdxReader {
     public double[][] data;
     public double[][] labels;
 
-    public IdxReader(String inputImagePath, String inputLabelPath,boolean shuffle){
-        this.data = readImages(inputImagePath);
-        this.labels = readLables(inputLabelPath);
+    public IdxReader(String inputImagePath, String inputLabelPath,boolean shuffle) throws Exception {
+        //this.data = readImages(inputImagePath);
+        //this.labels = readLables(inputLabelPath);
+        original(inputLabelPath,inputImagePath);
         System.out.println("IDX loaded with date size " + data.length + " and label size " + this.labels.length);
         //System.out.print(data);
         //System.out.print(labels);
@@ -225,8 +229,8 @@ public class IdxReader {
 
             int magicNumberImages = (inLabel.read() << 24) | (inLabel.read() << 16) | (inLabel.read() << 8) | (inLabel.read());
             int numberOfImages = (inLabel.read() << 24) | (inLabel.read() << 16) | (inLabel.read() << 8) | (inLabel.read());
-            //int numberOfRows  = (inLabel.read() << 24) | (inLabel.read() << 16) | (inLabel.read() << 8) | (inLabel.read());
-            //int numberOfColumns = (inLabel.read() << 24) | (inLabel.read() << 16) | (inLabel.read() << 8) | (inLabel.read());
+            int numberOfRows  = (inLabel.read() << 24) | (inLabel.read() << 16) | (inLabel.read() << 8) | (inLabel.read());
+            int numberOfColumns = (inLabel.read() << 24) | (inLabel.read() << 16) | (inLabel.read() << 8) | (inLabel.read());
 
             int magicNumberLabels = (inLabel.read() << 24) | (inLabel.read() << 16) | (inLabel.read() << 8) | (inLabel.read());
             int numberOfLabels = (inLabel.read() << 24) | (inLabel.read() << 16) | (inLabel.read() << 8) | (inLabel.read());
@@ -271,6 +275,116 @@ public class IdxReader {
         }
         return null;
     }
+
+
+
+
+
+
+    public void original(String inputLabelPath,String inputImagePath) throws Exception {
+        // TODO Auto-generated method stub
+        FileInputStream inImage = null;
+        FileInputStream inLabel = null;
+
+        String outputPath = Trainer.basepath+"/datareadtest/";
+
+        int[] hashMap = new int[10];
+
+        try {
+            inImage = new FileInputStream(inputImagePath);
+            inLabel = new FileInputStream(inputLabelPath);
+
+            int magicNumberImages = (inImage.read() << 24) | (inImage.read() << 16) | (inImage.read() << 8) | (inImage.read());
+            int numberOfImages = (inImage.read() << 24) | (inImage.read() << 16) | (inImage.read() << 8) | (inImage.read());
+            int numberOfRows  = (inImage.read() << 24) | (inImage.read() << 16) | (inImage.read() << 8) | (inImage.read());
+            int numberOfColumns = (inImage.read() << 24) | (inImage.read() << 16) | (inImage.read() << 8) | (inImage.read());
+
+            int magicNumberLabels = (inLabel.read() << 24) | (inLabel.read() << 16) | (inLabel.read() << 8) | (inLabel.read());
+            int numberOfLabels = (inLabel.read() << 24) | (inLabel.read() << 16) | (inLabel.read() << 8) | (inLabel.read());
+
+            //BufferedImage image = new BufferedImage(numberOfColumns, numberOfRows, BufferedImage.TYPE_INT_ARGB);
+            int numberOfPixels = numberOfRows * numberOfColumns;
+            int[] imgPixels = new int[numberOfPixels];
+
+            //mine
+            double[][] data = new double[numberOfImages][numberOfPixels];
+            double[][] labels = new double[numberOfImages][10];
+            System.out.println("loading progress: |          |");
+            System.out.print  ("                   ");
+
+            for(int i = 0; i < numberOfImages; i++) {
+
+                if(i % (numberOfImages/10) == 0) {System.out.print("#");}
+
+                for(int p = 0; p < numberOfPixels; p++) {
+                    int gray = 255 - inImage.read();
+                    imgPixels[p] = 0xFF000000 | (gray<<16) | (gray<<8) | gray;
+                }
+
+                //mine
+                for(int p = 0 ; p < imgPixels.length ; p++){
+                    data[i][p] = imgPixels[p];
+                }
+
+                //image.setRGB(0, 0, numberOfColumns, numberOfRows, imgPixels, 0, numberOfColumns);
+
+                int label = inLabel.read();
+
+                //mine
+                for(int l = 0 ; l < 10 ; l++){
+                    labels[i][l] = label==l?1:0;
+                }
+
+                //mine - image test
+                if(i%500==0){
+                    GrayscaleImage testimg = new GrayscaleImage(data[i],"1:1");
+                    testimg.makeJPG(outputPath,""+label);
+                }
+
+
+
+
+
+
+                hashMap[label]++;
+                //File outputfile = new File(outputPath + label + "_0" + hashMap[label] + ".png");
+
+                //ImageIO.write(image, "png", outputfile);
+            }
+            System.out.println("");
+
+            this.data = data;
+            this.labels = labels;
+
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } finally {
+            if (inImage != null) {
+                try {
+                    inImage.close();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+            if (inLabel != null) {
+                try {
+                    inLabel.close();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+
+
+
 
 }
 

@@ -367,6 +367,48 @@ public class NeuralNetwork {
     }
 
 
+    void backprop(IdxReader idxReader, double[][] errors, int batchsize) throws Exception {
+
+        //double errortotal = 0;
+        //double[] out;
+        double[] error = new double[layerDimensions[layerDimensions.length-1]];
+
+        //double[][] labels = idxReader.getLables();
+        //double[][] data = idxReader.getData();
+
+        gradient_weights.clear();
+        gradient_biases.clear();
+
+        for(int batch = 0 ; batch < (int)(idxReader.data.length/batchsize) ; batch++){
+            for (int img = batch ; img < batch + batchsize ; img++) {
+
+                /*
+                clearActivation();
+                out = propagate(idxReader.data[img]);
+
+                for (int i = 0; i < out.length; i++) {
+                    error[i] = Function.error(out[i], idxReader.labels[img][i]) * Function.squish_prime(layers[layers.length-1].nodes[i].getActivation());
+                    errortotal += Math.abs(error[i]);
+                }
+                 */
+
+                gradient_weights.reset();
+                gradient_biases.reset();
+                for(int i = 0 ; i < error.length ; i++){
+                    error[i] = errors[img][i];
+                }
+                layers[layers.length-1].setError(error);
+                for(int back = layers.length-2 ; back >= 0 ; back--){
+                    layerConnections[back].backprop(gradient_weights,gradient_biases);
+                }
+
+            }
+        }
+
+
+    }
+
+
 
     public void GradAdapt(double sigma) throws Exception {
 

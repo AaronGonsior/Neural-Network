@@ -59,9 +59,11 @@ public class Function {
         double[][] weights;
         double[][] newweights;
         //int rightbias;
+
         // !
         grad = gradient.getNormedGradient();
         //grad = gradient.getGradient();
+
         NeuralNetwork testNN = new NeuralNetwork(nn);
         //NeuralNetwork testNN = new NeuralNetwork(nn.layerDimensions,nn.weightedConnectionsList,nn.biases);
         partial = 0;
@@ -423,12 +425,14 @@ public class Function {
 
 
 
-    public static void test_gradient(NeuralNetwork nn,IdxReader idxReader) throws Exception {
+    public static void test_gradient(NeuralNetwork nn,IdxReader idxReader, double sigma) throws Exception {
         int n = 6;
+        int graphhight = 25;
+        double stepsize = sigma / n;
         double[] sigmas = new double[2*n+1];
         //-4E-16 -2E-16 -1E-16 0 1E-16 2E-16 4E-16
         for(int k = -n ; k <= n ; k++){
-            sigmas[k+n] = Math.signum(k) * Math.pow(2,Math.abs(k)) * 1E-3;
+            sigmas[k+n] = Math.signum(k) * Math.pow(2,Math.abs(k)) * stepsize;
         }
 
         double[] errors = new double[2*n+1];
@@ -441,33 +445,42 @@ public class Function {
         }
 
         for(int k = -n ; k <= n ; k++){
-            System.out.println("sigma: " + sigmas[k+n] + " (" + Math.signum(k)*Math.pow(2,Math.abs(k)) + "E-3) - avg_error: " + errors[k+n] + " - accuracy: " + accus[k+n]);
+            System.out.println("sigma: " + roundoff(sigmas[k+n],5) + "- avg_error: " + roundoff(errors[k+n],5) + " - accuracy: " + roundoff(accus[k+n],5));
             //System.out.format("%.5f",errors[k+n]);
         }
 
-        double max = 20;
-        double min = 0;
+        double max = 0;
+        double min = 20;
         for(int k = -n ; k <= n ; k++){
             if(errors[k+n] < min) min = errors[k+n];
             if(errors[k+n] > max) max = errors[k+n];
         }
+        System.out.println("errors: max = " + max + " - min = " + min);
 
+        String lengthsync = "";
         for(int k = -n ; k <= n ; k++){
-            System.out.print("sigma: " + sigmas[k+n] + " - errors - ");
-            for(int l = 0 ; l < 100*(errors[k+n]-min)/(max-min) ; l++) System.out.print("#");
+            lengthsync = "";
+            if(sigmas[k+n]==0.0) lengthsync = "0000-";
+            if(sigmas[k+n]>0.0) lengthsync = "-";
+            System.out.print("sigma: " + roundoff(sigmas[k+n],5) + lengthsync + " - errors - ");
+            for(int l = 0 ; l < graphhight * (errors[k+n]-min)/(max-min) ; l++) System.out.print("#");
             System.out.println("");
         }
 
-        max = 1;
-        min = 0;
+        max = 0;
+        min = 1;
         for(int k = -n ; k <= n ; k++){
             if(accus[k+n] < min) min = accus[k+n];
             if(accus[k+n] > max) max = accus[k+n];
         }
+        System.out.println("accuracies: max = " + max + " - min = " + min);
 
         for(int k = -n ; k <= n ; k++){
-            System.out.print("sigma: " + sigmas[k+n] + " - accuracies - ");
-            for(int l = 0 ; l < 100*(accus[k+n]-min)/(max-min) ; l++) System.out.print("#");
+            lengthsync = "";
+            if(sigmas[k+n]==0.0) lengthsync = "0000-";
+            if(sigmas[k+n]>0.0) lengthsync = "-";
+            System.out.print("sigma: " + roundoff(sigmas[k+n],5) + lengthsync + " - accuracies - ");
+            for(int l = 0 ; l < graphhight * (accus[k+n]-min)/(max-min) ; l++) System.out.print("#");
             System.out.println("");
         }
 
@@ -539,7 +552,6 @@ public class Function {
     }
      */
 
-    /*
     public static double armijo(NeuralNetwork nn, double[][] trainingdata, double[][] lables, int outputnodenum,Gradient gradient,int cores) throws Exception {
 
         double gamma = .1;
@@ -586,9 +598,22 @@ public class Function {
         }while (sigma >= .01);
         return sigma;
     }
-     */
 
-
+    static void createimagecheck(int num_pics, IdxReader idxReader) throws Exception {
+        System.out.println("data check pic creation");
+        for(int pic=1;pic<=num_pics;pic++){
+            String name = "";
+            int index = (int)(Math.random() * idxReader.data.length);
+            GrayscaleImage testimg = new GrayscaleImage(idxReader.data[index], "1:1");
+            int label = 0;
+            for(int i=0;i<idxReader.labels[index].length;i++){
+                label = idxReader.labels[index][i]==1?i:label;
+            }
+            name += label;
+            testimg.makeJPG(Trainer.basepath, name);
+        }
+        System.out.println("data check pic creation end");
+    }
 
 
 }

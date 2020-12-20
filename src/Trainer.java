@@ -12,6 +12,7 @@ public class Trainer {
     static final String basepath = System.getProperty("user.dir");
     NetworkDrawer nd;
     int iteration;
+    Problem digitclassification;
 
 
     public Trainer(){
@@ -49,6 +50,8 @@ public class Trainer {
         double sigma;
         //double errortotal;
         double[][] errors;
+
+        boolean testing = true;
 
 
 
@@ -88,101 +91,132 @@ public class Trainer {
             this.avg_error = nn.averageError;
             this.best_bet_accuracy = nn.best_bet_accuracy;
 
-            sigma = 0.1;
-            Function.print_n_log("Caution: sigma is constant! (" + sigma + ")",log_continue);
 
-            /*
-            sigma = Function.PowellWolfe(nn,idxReader.data,idxReader.lables,outputnodenum,nn.gradient_weights,1);
-            if(sigma == 0){
+            int sigma_case = 1;
 
-                message = name + " reached local minimum. optimizing stops";
-                Function.print_n_log(message,log_continue);
+            sigma = 0;
+            switch (sigma_case) {
+                case 0:
+                    sigma = 0.1;
+                    Function.print_n_log("Caution: sigma is constant! (" + sigma + ")",log_continue);
+                    break;
+                case 1:
+                    double frac = 0.1;
+                    sigma = avg_error*frac;
+                    Function.print_n_log("Caution: sigma is a fraction (" + frac + ") of avg_error (" + sigma + ")",log_continue);
+                    break;
+                case 2:
+                    sigma = Function.armijo(nn,idxReader.data,idxReader.labels,10,nn.gradient_weights,1);
+                    Function.print_n_log("Caution: sigma is determined by armijo (beta) ",log_continue);
+                    break;
+                case 3:
+                    /*
+                    sigma = Function.PowellWolfe(nn,idxReader.data,idxReader.lables,outputnodenum,nn.gradient_weights,1);
+                    if(sigma == 0){
 
-                final_ = true;
-                running = false;
-                break;
+                        message = name + " reached local minimum. optimizing stops";
+                        Function.print_n_log(message,log_continue);
+
+                        final_ = true;
+                        running = false;
+                        break;
+                    }
+                     */
+                     break;
             }
-             */
+            if(sigma==0){
+                System.out.println("sigma is 0! - break");
+                System.exit(1);
+            }
 
-            /*
+
+
             // ----- testing -----
-            System.out.print("grad_test");
-            Function.test_gradient(nn,idxReader);
-            System.out.print("start gradadapt");
-             */
+            if(testing){
+                System.out.print("grad_test");
+                Function.test_gradient(nn,idxReader,sigma);
+                System.out.print("start gradadapt");
+            }
+            // ----- end testing -----
+
+
 
             nn.GradAdapt(sigma);
 
-            /*
-            nn.propagate_get_avgerror(idxReader);
-            nn.propagate_get_avgerror(idxReader);
-            this.avg_error = nn.averageError;
-             */
-
         }
+
 
 
         // --------- testing ----------
-        switch (Util.getOS()) {
-            case WINDOWS:
+        if(testing){
+            switch (Util.getOS()) {
+                case WINDOWS:
 
-                int num_print = 1;
+                    int num_print = 5;
 
-                System.out.println("testpic");
-                //best_bet_accuracy = nn.propagate_get_best_bet_accuracy(idxReader);
-                //double[][] labels = idxReader.getLables();
-                //double[][] data = idxReader.getData();
+                    System.out.println("testpic");
+                    //best_bet_accuracy = nn.propagate_get_best_bet_accuracy(idxReader);
+                    //double[][] labels = idxReader.getLables();
+                    //double[][] data = idxReader.getData();
 
-                for (int pic = 0; pic < num_print; pic++) {
-                    GrayscaleImage testimg = new GrayscaleImage(idxReader.data[pic], "1:1");
-                    double[] test_out;
-                    test_out = nn.propagate(idxReader.data[pic]);
-                    String name = "(" + Function.roundoff(avg_error,2) + " - " + Function.roundoff(best_bet_accuracy * 100, 2) + "%) ";
+                    for (int pic = 0; pic < num_print; pic++) {
+                        GrayscaleImage testimg = new GrayscaleImage(idxReader.data[pic], "1:1");
+                        double[] test_out;
+                        test_out = nn.propagate(idxReader.data[pic]);
+                        String name = "(" + Function.roundoff(avg_error,2) + " - " + Function.roundoff(best_bet_accuracy * 100, 2) + "%) ";
 
-                    int label = 0;
-                    for (int i = 0; i < idxReader.labels[pic].length; i++) {
-                        if (idxReader.labels[pic][i] == 1) label = i;
-                    }
-                    name += "label (" + label + ") ";
-
-                    double max = 0;
-                    int best_bet = 0;
-                    for (int i = 0; i < test_out.length; i++) {
-                        if (test_out[i] > max) {
-                            max = test_out[i];
-                            best_bet = i;
+                        int label = 0;
+                        for (int i = 0; i < idxReader.labels[pic].length; i++) {
+                            if (idxReader.labels[pic][i] == 1) label = i;
                         }
+                        name += "label (" + label + ") ";
+
+                        double max = 0;
+                        int best_bet = 0;
+                        for (int i = 0; i < test_out.length; i++) {
+                            if (test_out[i] > max) {
+                                max = test_out[i];
+                                best_bet = i;
+                            }
+                        }
+
+                        name += "best_bet (" + best_bet + ") ";
+
+                        name += "out - ";
+                        for (int i = 0; i < test_out.length; i++) {
+                            name += "#" + i + "(" + Function.roundoff(test_out[i],2) + ") ";
+                        }
+
+                        double[] test_error = new double[test_out.length];
+                        for (int i = 0; i < test_out.length; i++) {
+                            test_error[i] = Function.error(test_out[i], idxReader.labels[pic][i]);
+                        }
+
+                        name += "errors - ";
+                        for (int i = 0; i < test_out.length; i++) {
+                            name += "#" + i + "(" + Double.valueOf((int) (test_error[i] * 100)) / 100 + ") ";
+                        }
+
+                        testimg.makeJPG(basepath, name);
+                        //testimg.makeJPG(basepath,"test");
                     }
 
-                    name += "best_bet (" + best_bet + ") ";
+                    Function.print_n_log("(" + Function.roundoff(avg_error,2) + " - " + Function.roundoff(best_bet_accuracy * 100, 2) + "%) ",log_continue);
 
-                    name += "out - ";
-                    for (int i = 0; i < test_out.length; i++) {
-                        name += "#" + i + "(" + Function.roundoff(test_out[i],2) + ") ";
-                    }
-
-                    double[] test_error = new double[test_out.length];
-                    for (int i = 0; i < test_out.length; i++) {
-                        test_error[i] = Function.error(test_out[i], idxReader.labels[pic][i]);
-                    }
-
-                    name += "errors - ";
-                    for (int i = 0; i < test_out.length; i++) {
-                        name += "#" + i + "(" + Double.valueOf((int) (test_error[i] * 100)) / 100 + ") ";
-                    }
-
-                    testimg.makeJPG(basepath, name);
-                    //testimg.makeJPG(basepath,"test");
-                }
-
-                Function.print_n_log("(" + Function.roundoff(avg_error,2) + " - " + Function.roundoff(best_bet_accuracy * 100, 2) + "%) ",log_continue);
-
-            case LINUX:
-                Function.print_n_log("(" + Function.roundoff(avg_error,2) + " - " + Function.roundoff(best_bet_accuracy * 100, 2) + "%) ",log_continue);
+                case LINUX:
+                    Function.print_n_log("(" + Function.roundoff(avg_error,2) + " - " + Function.roundoff(best_bet_accuracy * 100, 2) + "%) ",log_continue);
+            }
         }
+        // --------- end testing ----------
 
-        this.avg_error = nn.propagate_get_avgerror(idxReader);
-        this.best_bet_accuracy = nn.propagate_get_best_bet_accuracy(idxReader);
+
+
+
+
+
+
+        //this.avg_error = nn.propagate_get_avgerror(idxReader);
+        //this.best_bet_accuracy = nn.propagate_get_best_bet_accuracy(idxReader);
 
         running = false;
     }
@@ -190,8 +224,9 @@ public class Trainer {
 
     public static void main(String[] args) throws Exception {
 
-        int iterations = 1;
-        int rounds = 50;
+
+        int iterations = 10;
+        int rounds = 100;
 
         String continue_path = "";
         String inputImagePath = "";
@@ -213,7 +248,7 @@ public class Trainer {
         //set up neural network structure
         int inputnodenum = 28*28;
         int outputnodenum = 10;
-        int[] layerdims = new int[]{inputnodenum,16,16,10,outputnodenum};
+        int[] layerdims = new int[]{inputnodenum,10,outputnodenum};
 
         trainer.setNN(layerdims,null);
         trainer.nn.setName("savedNN_single");
@@ -250,9 +285,20 @@ public class Trainer {
         }
 
 
-        IdxReader idxReader = new IdxReader(inputImagePath,inputLabelPath,true);
+        IdxReader idxReader = new IdxReader(inputImagePath,inputLabelPath,false);
 
 
+
+        //testimg
+        Function.createimagecheck(10,idxReader);
+        //idxReader.original(inputLabelPath,inputImagePath);
+        System.out.println("images created");
+
+        //needed for avgerror variable in first train?
+        //trainer.nn.propagate(idxReader);
+
+
+        Problem digitclassification = new ImageClassification(28,28,10,idxReader);
 
         for(int round = 0 ; round < rounds ; round++){
 
@@ -260,10 +306,6 @@ public class Trainer {
 
             switch (Util.getOS()){
                 case WINDOWS:
-
-                    //trainer.nn.propagate_get_best_bet_accuracy(idxReader);
-                    //trainer.best_bet_accuracy = trainer.nn.best_bet_accuracy;
-
                     trainer.nn.propagate(idxReader);
 
                     System.out.println("round " + round + " training is over");

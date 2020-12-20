@@ -122,8 +122,9 @@ public class NetworkDrawer extends Canvas implements Runnable{
             }
 
             g.setColor(frontpaint);
-            g.drawString("Iteration: " + trainer.iteration , (int)(width * 0.9) , 50);
-            g.drawString("Accuracy: " + Function.roundoff(trainer.best_bet_accuracy * 100,2)+"%" , (int)(width * 0.9) , 70);
+            int x_pos = (int)(width * 1) - 150;
+            g.drawString("Iteration: " + trainer.iteration , x_pos , 50);
+            g.drawString("Accuracy: " + Function.roundoff(trainer.best_bet_accuracy * 100,2)+"%" , x_pos , 70);
 
         }
 
