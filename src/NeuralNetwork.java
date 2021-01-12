@@ -9,8 +9,9 @@ public class NeuralNetwork {
     Layer[] layers;
     LayerConnection[] layerConnections;
     int[] layerDimensions;
-    Gradient gradient_weights;
-    Gradient gradient_biases;
+    //Gradient gradient_weights;
+    //Gradient gradient_biases;
+    Gradient gradient;
     double averageError;
     double best_bet_accuracy;
     String name;
@@ -18,12 +19,14 @@ public class NeuralNetwork {
     public NeuralNetwork(int[] layerDimensions, WeightedConnections[] weightedConnectionsList){
 
         int numedges = 0;
-        for(int layer = 0 ; layer < layerDimensions.length-2 ; layer++){
+        for(int layer = 0 ; layer < layerDimensions.length-2/*-2*/ ; layer++){
             numedges += layerDimensions[layer]*(layerDimensions[layer+1]);
         }
-        numedges += layerDimensions[layerDimensions.length-2]*layerDimensions[layerDimensions.length-1];
+        numedges += layerDimensions[layerDimensions.length-2/*-2*/]*layerDimensions[layerDimensions.length-1];
         System.out.println("num_edges: " + numedges);
-        gradient_weights = new Gradient(numedges);
+
+        //gradient_weights = new Gradient(numedges);
+        //gradient = new Gradient();
 
 
         int numnodes = 0;
@@ -31,17 +34,18 @@ public class NeuralNetwork {
             numnodes += layerDimensions[layer];
         }
         System.out.println("num_biases: " + numnodes);
-        gradient_biases = new Gradient(numnodes);
+
+        //gradient_biases = new Gradient(numnodes);
 
         layers = new Layer[layerDimensions.length];
         for(int layer = 0 ; layer < layerDimensions.length ; layer++){
-            layers[layer] = new Layer(layerDimensions[layer]);
+            layers[layer] = new Layer(layer,layerDimensions[layer]);
         }
-        layers[layerDimensions.length-1] = new Layer(layerDimensions[layerDimensions.length-1]);
+        layers[layerDimensions.length-1] = new Layer(layerDimensions.length-1,layerDimensions[layerDimensions.length-1]);
 
         layerConnections = new LayerConnection[layerDimensions.length-1];
         for(int connection = 0 ; connection < layerDimensions.length-1 ; connection++){
-            layerConnections[connection] = new LayerConnection(layers[connection],layers[connection+1],weightedConnectionsList[connection]);
+            layerConnections[connection] = new LayerConnection(connection,layers[connection],layers[connection+1],weightedConnectionsList[connection]);
         }
 
         this.layerDimensions = layerDimensions;
@@ -56,7 +60,8 @@ public class NeuralNetwork {
         this.layers = nn.layers;
         this.layerConnections = nn.layerConnections;
         this.layerDimensions = nn.layerDimensions;
-        this.gradient_weights = nn.gradient_weights;
+        this.gradient = nn.gradient;
+        //this.gradient_weights = nn.gradient_weights;
         this.averageError = nn.averageError;
         this.name = nn.name + "copy";
     }
@@ -337,8 +342,10 @@ public class NeuralNetwork {
         //double[][] labels = idxReader.getLables();
         //double[][] data = idxReader.getData();
 
-        gradient_weights.clear();
-        gradient_biases.clear();
+        //gradient_weights.clear();
+        //gradient_biases.clear();
+
+        gradient.clear();
 
         for (int img = 0; img < idxReader.data.length; img++) {
 
@@ -352,14 +359,15 @@ public class NeuralNetwork {
             }
              */
 
-            gradient_weights.reset();
-            gradient_biases.reset();
+            //gradient_weights.reset();
+            //gradient_biases.reset();
             for(int i = 0 ; i < error.length ; i++){
                 error[i] = errors[img][i];
             }
             layers[layers.length-1].setError(error);
             for(int back = layers.length-2 ; back >= 0 ; back--){
-                layerConnections[back].backprop(gradient_weights,gradient_biases);
+                //layerConnections[back].backprop(gradient_weights,gradient_biases);
+                layerConnections[back].backprop(gradient);
             }
 
         }
@@ -376,8 +384,10 @@ public class NeuralNetwork {
         //double[][] labels = idxReader.getLables();
         //double[][] data = idxReader.getData();
 
-        gradient_weights.clear();
-        gradient_biases.clear();
+        //gradient_weights.clear();
+        //gradient_biases.clear();
+
+        gradient.clear();
 
         for(int batch = 0 ; batch < (int)(idxReader.data.length/batchsize) ; batch++){
             for (int img = batch ; img < batch + batchsize ; img++) {
@@ -392,14 +402,15 @@ public class NeuralNetwork {
                 }
                  */
 
-                gradient_weights.reset();
-                gradient_biases.reset();
+                //gradient_weights.reset();
+                //gradient_biases.reset();
                 for(int i = 0 ; i < error.length ; i++){
                     error[i] = errors[img][i];
                 }
                 layers[layers.length-1].setError(error);
                 for(int back = layers.length-2 ; back >= 0 ; back--){
-                    layerConnections[back].backprop(gradient_weights,gradient_biases);
+                    //layerConnections[back].backprop(gradient_weights,gradient_biases);
+                    layerConnections[back].backprop(gradient);
                 }
 
             }
@@ -410,7 +421,7 @@ public class NeuralNetwork {
 
 
 
-    public void GradAdapt(double sigma) throws Exception {
+    public void GradAdapt_old(double sigma) throws Exception {
 
         /*
         Is the order of filling and reading the gradient consistent??
@@ -436,11 +447,11 @@ public class NeuralNetwork {
         //double[] newbiases;
 
         // !
-        grad_weights = gradient_weights.getNormedGradient();
+        //grad_weights = gradient_weights.getNormedGradient();
         //grad_weights = gradient_weights.getGradient();
         //grad_weights = gradient_weights.getAvgGradient();
 
-        grad_biases = gradient_biases.getNormedGradient();
+        //grad_biases = gradient_biases.getNormedGradient();
         //grad_biases = gradient_biases.getGradient();
         //grad_biases = gradient_biases.getAvgGradient();
 
@@ -451,7 +462,7 @@ public class NeuralNetwork {
             newweights = new double[weights.length][weights[0].length];
             for(int j = 0; j < layerDimensions[layer+1] ; j++){
                 for(int i = 0 ; i < layerDimensions[layer] ; i++){
-                    newweights[i][j] = weights[i][j] + sigma * (+1)*grad_weights[partial++];
+                    //newweights[i][j] = weights[i][j] + sigma * (+1)*grad_weights[partial++];
                 }
             }
             layerConnections[layer].weightedConnections.setWeightedConnections(newweights);
@@ -480,7 +491,7 @@ public class NeuralNetwork {
 
 
             for(int node = 0 ; node < layers[layer].numNodes ; node++){
-                layers[layer].nodes[node].setBias( layers[layer].nodes[node].bias + sigma * (+1)*grad_biases[partial++] );
+                //layers[layer].nodes[node].setBias( layers[layer].nodes[node].bias + sigma * (+1)*grad_biases[partial++] );
             }
 
 
@@ -489,6 +500,34 @@ public class NeuralNetwork {
 
     }
 
+
+    void GradAdapt(double sigma) throws Exception {
+        Object[] layerconnection_gradients = gradient.layerconnection_gradients;
+        Object[] node_gradients = gradient.node_gradients;
+
+        double[][] weights;
+        double[][] newweights;
+
+
+        for(int layer_c = 0 ; layer_c < layerConnections.length-1 ; layer_c++){
+            double[][] current_gradient_layerc = (double[][]) layerconnection_gradients[layer_c];
+            weights = layerConnections[layer_c].weightedConnections.getWeightedconnections();
+            newweights = new double[weights.length][weights[0].length];
+            for(int node_left = 0 ; node_left < layerConnections[layer_c].numLeft ; node_left++){
+                for(int node_right = 0 ; node_right < layerConnections[layer_c].numRight ; node_right++){
+                    newweights[node_left][node_right] = weights[node_left][node_right] + sigma * (+1) * current_gradient_layerc[node_left][node_right];
+                }
+            }
+        }
+
+        for(int layer = 0 ; layer < layers.length ; layer++){
+            double[] current_gradient_node = (double[]) node_gradients[layer];
+            for(int node = 0 ; node < layers[layer].numNodes ; node++){
+                layers[layer].nodes[node].setBias( layers[layer].nodes[node].bias + sigma * (+1) * current_gradient_node[node] );
+            }
+        }
+
+    }
 
 
 

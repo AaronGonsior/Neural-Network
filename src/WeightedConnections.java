@@ -8,7 +8,7 @@ public class WeightedConnections {
         double[][] weights = new double[dim1][dim2];
         for(int i = 0 ; i < dim1 ; i++){
             for(int j = 0 ; j < dim2 ; j++){
-                weights[i][j] = 2*2*(Math.random()-.5);
+                weights[i][j] = 2*(Math.random()-.5);
                 //weights[i][j] = 1;
             }
         }

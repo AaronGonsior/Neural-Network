@@ -34,6 +34,7 @@ public class Trainer {
             weightedConnectionsList[i] = new WeightedConnections(layerdims[i],layerdims[i+1]);
         }
         this.nn = new NeuralNetwork(layerdims,weightedConnectionsList);
+        nn.gradient = new Gradient(nn);
         nn.setName("NN");
     }
 
@@ -51,7 +52,7 @@ public class Trainer {
         //double errortotal;
         double[][] errors;
 
-        boolean testing = true;
+        boolean testing = false;
 
 
 
@@ -92,12 +93,12 @@ public class Trainer {
             this.best_bet_accuracy = nn.best_bet_accuracy;
 
 
-            int sigma_case = 1;
+            int sigma_case = 0;
 
             sigma = 0;
             switch (sigma_case) {
                 case 0:
-                    sigma = 0.1;
+                    sigma = 100;
                     Function.print_n_log("Caution: sigma is constant! (" + sigma + ")",log_continue);
                     break;
                 case 1:
@@ -106,7 +107,8 @@ public class Trainer {
                     Function.print_n_log("Caution: sigma is a fraction (" + frac + ") of avg_error (" + sigma + ")",log_continue);
                     break;
                 case 2:
-                    sigma = Function.armijo(nn,idxReader.data,idxReader.labels,10,nn.gradient_weights,1);
+                    System.exit(1);
+                    //sigma = Function.armijo(nn,idxReader.data,idxReader.labels,10,nn.gradient_weights,1);
                     Function.print_n_log("Caution: sigma is determined by armijo (beta) ",log_continue);
                     break;
                 case 3:
@@ -225,7 +227,7 @@ public class Trainer {
     public static void main(String[] args) throws Exception {
 
 
-        int iterations = 10;
+        int iterations = 1;
         int rounds = 100;
 
         String continue_path = "";

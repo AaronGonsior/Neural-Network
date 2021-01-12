@@ -5,8 +5,10 @@ public class LayerConnection {
     int numLeft;
     int numRight;
     WeightedConnections weightedConnections;
+    int layerconnection_number;
 
-    public LayerConnection(Layer layerLeft, Layer layerRight, WeightedConnections weightedConnections){
+    public LayerConnection(int layerconnection_number, Layer layerLeft, Layer layerRight, WeightedConnections weightedConnections){
+        this.layerconnection_number = layerconnection_number;
         this.layerLeft=layerLeft;
         this.layerRight=layerRight;
         this.numLeft=layerLeft.numNodes;
@@ -24,6 +26,7 @@ public class LayerConnection {
         }
     }
 
+    /*
     void backprop(Gradient gradient_weights,Gradient gradient_biases) throws Exception {
 
         double[] error = layerRight.getError();
@@ -52,6 +55,37 @@ public class LayerConnection {
 
         layerLeft.setError(leftLayerFeedback);
         weightedConnections.setWeightedConnections(connections);
+    }
+     */
+
+    void backprop(Gradient gradient) throws Exception {
+
+        double[] error = layerRight.getError();
+        double[][] connections = weightedConnections.getWeightedconnections();
+        double[] leftLayerFeedback = new double[numLeft];
+
+        System.out.println("Attention! biases deactivated in LayerConnection: backprop()");
+        for(int node = 0 ; node < numRight ; node++){
+            //gradient.add_bias(layerRight.layer_number,node,error[node]);
+        }
+
+        for(int node_right = 0 ; node_right < numRight ; node_right++){
+            double[] leftSignals = layerLeft.getSignal();
+            for(int node_left = 0 ; node_left < numLeft ; node_left++){
+                gradient.add_weight(layerconnection_number,node_left,node_right,error[node_right]*leftSignals[node_left]);
+            }
+        }
+
+        for(int node_left = 0 ; node_left < numLeft ; node_left++){
+            for(int node_right = 0 ; node_right < numRight ; node_right++){
+                leftLayerFeedback[node_left] += connections[node_left][node_right] * error[node_right];
+            }
+            leftLayerFeedback[node_left] *= Function.squish_prime(layerLeft.nodes[node_left].getActivation());
+        }
+
+        layerLeft.setError(leftLayerFeedback);
+        weightedConnections.setWeightedConnections(connections);
+
     }
 
 

@@ -2,8 +2,10 @@ public class Layer {
     public Node[] nodes;
     public int numNodes;
     public double[] error;
+    int layer_number;
 
-    public Layer(int numNodes){
+    public Layer(int layer_number, int numNodes){
+        this.layer_number = layer_number;
         this.numNodes = numNodes;
         nodes = new Node[numNodes];
         for(int i=0 ; i < numNodes ; i++){

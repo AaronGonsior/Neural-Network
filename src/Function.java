@@ -53,6 +53,7 @@ public class Function {
         return errortotal / (double) datasize;
     }
 
+    /*
     public static NeuralNetwork GradAdaptNN(NeuralNetwork nn, double sigma, Gradient gradient) throws Exception {
         double[] grad;
         int partial;
@@ -71,7 +72,7 @@ public class Function {
             weights = testNN.layerConnections[layer].weightedConnections.getWeightedconnections();
             newweights = new double[weights.length][weights[0].length];
             //rightbias = testNN.layers[layer+1].biases ? 1 : 0;
-            for(int j = 0; j < testNN.layerDimensions[layer+1] /*-rightbias*/ ; j++){
+            for(int j = 0; j < testNN.layerDimensions[layer+1] ; j++){
                 for(int i = 0 ; i < testNN.layerDimensions[layer] ; i++){
                     newweights[i][j] = weights[i][j] + sigma*grad[partial++];
                 }
@@ -81,6 +82,7 @@ public class Function {
         }
         return testNN;
     }
+     */
 
     /*
     public static double PowellWolfe(NeuralNetwork nn, double[][] trainingdata, double[][] lables, int outputnodenum,Gradient gradient,int cores) throws Exception {
@@ -439,7 +441,9 @@ public class Function {
         double[] accus = new double[2*n+1];
         NeuralNetwork testNN;
         for(int k = -n ; k <= n ; k++){
-            testNN = Function.GradAdaptNN(nn,sigmas[k+n],nn.gradient_weights);
+            testNN = new NeuralNetwork(nn);
+            testNN.GradAdapt(sigma);
+            //testNN = Function.GradAdaptNN(nn,sigmas[k+n],nn.gradient_weights);
             errors[k+n] = testNN.propagate_get_avgerror(idxReader);
             accus[k+n] = testNN.propagate_get_best_bet_accuracy(idxReader);
         }
@@ -501,6 +505,7 @@ public class Function {
         //double output = /*Math.signum(lable-out)**/0.5*Math.pow(lable-out,2);
 
         //if(Double.isNaN(output)) throw new IllegalStateException();
+        if(output > 0) output *= 9;
         return output;
     }
 
@@ -580,7 +585,9 @@ public class Function {
 
         //change sigma until armijo is satisfied
         do {
-            testNN = Function.GradAdaptNN(nn,sigma,gradient);
+            testNN = new NeuralNetwork(nn);
+            testNN.GradAdapt(sigma);
+            //testNN = Function.GradAdaptNN(nn,sigma,gradient);
             avg_error_after = Function.avgError(testNN,trainingdata,lables,outputnodenum,cores);
 
             if( avg_error_after - avg_error_before <= - sigma * gamma ){ //Armijo condition
