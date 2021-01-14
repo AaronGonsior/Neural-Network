@@ -64,9 +64,9 @@ public class LayerConnection {
         double[][] connections = weightedConnections.getWeightedconnections();
         double[] leftLayerFeedback = new double[numLeft];
 
-        System.out.println("Attention! biases deactivated in LayerConnection: backprop()");
+        //System.out.println("Attention! biases deactivated in LayerConnection: backprop()");
         for(int node = 0 ; node < numRight ; node++){
-            //gradient.add_bias(layerRight.layer_number,node,error[node]);
+            gradient.add_bias(layerRight.layer_number,node,error[node]);
         }
 
         for(int node_right = 0 ; node_right < numRight ; node_right++){

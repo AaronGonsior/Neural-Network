@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.function.DoublePredicate;
+
 public class Trainer {
 
     NeuralNetwork nn;
@@ -13,6 +16,9 @@ public class Trainer {
     NetworkDrawer nd;
     int iteration;
     Problem digitclassification;
+
+    ArrayList avgErrors = new ArrayList<Double>();
+    ArrayList bestBetAccus = new ArrayList<Double>();
 
 
     public Trainer(){
@@ -98,7 +104,7 @@ public class Trainer {
             sigma = 0;
             switch (sigma_case) {
                 case 0:
-                    sigma = 100;
+                    sigma = 1;
                     Function.print_n_log("Caution: sigma is constant! (" + sigma + ")",log_continue);
                     break;
                 case 1:
@@ -228,7 +234,7 @@ public class Trainer {
 
 
         int iterations = 1;
-        int rounds = 100;
+        int rounds = 1000;
 
         String continue_path = "";
         String inputImagePath = "";
@@ -302,6 +308,11 @@ public class Trainer {
 
         Problem digitclassification = new ImageClassification(28,28,10,idxReader);
 
+
+        ArrayList[] charts = new ArrayList[2];
+        ChartDrawer chartDrawer = new ChartDrawer(charts,new String[]{"avgError","BestBetAccu"},1000,1000);
+
+
         for(int round = 0 ; round < rounds ; round++){
 
             trainer.train(idxReader,iterations);
@@ -318,7 +329,32 @@ public class Trainer {
 
             }
 
+
+            trainer.avgErrors.add(trainer.avg_error);
+            trainer.bestBetAccus.add(trainer.best_bet_accuracy);
+
+            charts[0] = trainer.avgErrors;
+            charts[1] = trainer.bestBetAccus;
+            chartDrawer.update(charts);
+
+            //manual print - obsolete thru ChartDrawer
+            /*
+            for(int err = 0 ; err < trainer.avgErrors.size() ; err++){
+                System.out.print(trainer.avgErrors.get(err) + " - " );
+            }
+            System.out.print("\n");
+
+            for(int bb = 0 ; bb < trainer.avgErrors.size() ; bb++){
+                System.out.print(trainer.bestBetAccus.get(bb) + " - " );
+            }
+            System.out.print("\n");
+             */
+
+
+
+
         }
+
 
         trainer.nn.save(savepath_basic);
         trainer.nn.save(savepath_detailed);

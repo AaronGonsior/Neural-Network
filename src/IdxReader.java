@@ -335,6 +335,7 @@ public class IdxReader {
                     labels[i][l] = label==l?1:0;
                 }
 
+
                 //mine - image test
                 if(i%500==0){
                     GrayscaleImage testimg = new GrayscaleImage(data[i],"1:1");
