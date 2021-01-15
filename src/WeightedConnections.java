@@ -35,7 +35,7 @@ public class WeightedConnections {
             for(int pixel = 0 ; pixel < pixels ; pixel++)
                 currentimg[(int) Math.floor(pixel/pixeldim)][Math.floorMod(pixel,pixeldim)] = weightedConnections[pixel][map];
             images[map] = new GreenRedImage(currentimg);
-            images[map].makeJPG(path,"weightsmap"+Integer.toString(map)+"_"+name,pixeldim);
+            images[map].makeJPG(path,"weightsmap"+Integer.toString(map)+"_"+name,pixeldim,true);
         }
     }
 

@@ -30,7 +30,7 @@ public class ChartDrawer extends Canvas implements Runnable{
 
         //this.trainer = trainer;
         //this.nn = nn;
-        frame = new JFrame("Neural network");
+        frame = new JFrame("Chart Drawer");
         //canvas = new Canvas();
         this.setSize(width, height);
         frame.add(this);
@@ -48,8 +48,8 @@ public class ChartDrawer extends Canvas implements Runnable{
         this.setSize(width, height);
 
         frame.remove(this);
-        frame.add(this);
         frame.update(frame.getGraphics());
+        frame.add(this);
     }
 
     public void paint(Graphics g) {
@@ -79,22 +79,22 @@ public class ChartDrawer extends Canvas implements Runnable{
             }
 
             int bound_l,bound_r,bound_u,bound_d;
-            bound_l = (int)((width/num_charts)*(10.0/100.0));
             bound_u = (int)((height/num_charts)*(10.0/100.0));
             bound_d = (int)((height/num_charts)*(90.0/100.0));
-            bound_r = (int)((width/num_charts)*(90.0/100.0));
+            bound_r = (int)((width)*(90.0/100.0));
+            bound_l = (int)((width)*(5.0/100.0));
 
             for(int i = 0 ; i < chart_datas[chart].size() - 1 ; i++){
                 double datapoint_new = chart_datas[chart].get(i);
                 g.setColor(frontpaint);
-                g.drawLine(i*( width / num_datapoints),
-                        (int)(chart*( height / num_charts)) + bound_u + (int)( ( (chart_datas[chart].get(i) - min) / (max - min) ) * bound_d /*0.8*height/num_charts*/ ),
-                        (i+1)*( width / num_datapoints),
-                        (int)(chart*( height / num_charts)) + bound_u + (int)( ( (chart_datas[chart].get(i+1) - min) / (max - min) ) * bound_d /*0.8*height/num_charts*/ )
+                g.drawLine(bound_l + i*( bound_r / num_datapoints),
+                        chart * (height/num_charts) + bound_u + (int)( ( (chart_datas[chart].get(i) - min) / (max - min) ) * (bound_d-bound_u) /*0.8*height/num_charts*/ ),
+                        bound_l + (i+1)*( bound_r / num_datapoints),
+                         chart * (height/num_charts)  + bound_u + (int)( ( (chart_datas[chart].get(i+1) - min) / (max - min) ) * (bound_d-bound_u) /*0.8*height/num_charts*/ )
                         );
 
-                g.drawString(labels[chart],0 ,(chart)*(height/num_charts) + 25 );
-                g.drawString("max: " + String.valueOf(max),0 ,(chart)*(height/num_charts) + 40 );
+                g.drawString(labels[chart] + ": " + chart_datas[chart].get(chart_datas[chart].size()-1),0 ,(chart)*(height/num_charts) + 10 );
+                g.drawString("max: " + String.valueOf(max),0 ,(chart)*(height/num_charts) + 20 );
                 g.drawString("min: " + String.valueOf(min),0 ,(chart+1)*(height/num_charts) - 40 );
 
             }

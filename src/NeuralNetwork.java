@@ -15,8 +15,11 @@ public class NeuralNetwork {
     double averageError;
     double best_bet_accuracy;
     String name;
+    Trainer trainer;
 
-    public NeuralNetwork(int[] layerDimensions, WeightedConnections[] weightedConnectionsList){
+    public NeuralNetwork(Trainer trainer, int[] layerDimensions, WeightedConnections[] weightedConnectionsList){
+
+        this.trainer = trainer;
 
         int numedges = 0;
         for(int layer = 0 ; layer < layerDimensions.length-2/*-2*/ ; layer++){
@@ -52,7 +55,6 @@ public class NeuralNetwork {
         for(int i = 0 ; i < weightedConnectionsList.length; i++){
             layerConnections[i].weightedConnections = weightedConnectionsList[i];
         }
-
 
     }
 

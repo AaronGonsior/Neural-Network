@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class Gradient {
 
     /*
@@ -11,16 +13,9 @@ public class Gradient {
     Object[] layerconnection_gradients;
     Object[] node_gradients;
 
-    /*
-    public Gradient(int length){
-        gradient = new double[length];
-        entries = new int[length];
-        current = 0;
-        this.length = length;
-    }
-     */
+    public Gradient(){
 
-    public Gradient(){}
+    }
 
     public Gradient(NeuralNetwork nn){
         this.nn = nn;
@@ -80,6 +75,27 @@ public class Gradient {
         for(int layer_c = 0 ; layer_c < nn.layerConnections.length ; layer_c++){
             layerconnection_gradients[layer_c] = new double[ nn.layerConnections[layer_c].layerLeft.nodes.length ][ nn.layerConnections[layer_c].layerRight.nodes.length ];
         }
+
+        //biases? add?? ----------------
+
+    }
+
+    void makeJPG() throws IOException {
+        int dim = 28;
+        double[][] cur_image = new double[dim][dim];
+        for(int j = 0 ; j < nn.layerDimensions[1] ; j++){
+
+
+            for(int i = 0 ; i < dim*dim ; i++){
+                double[][] temp = (double[][])(layerconnection_gradients[0]);
+                cur_image[(int)(i/dim)][i%dim] = temp[i][j];
+            }
+            GreenRedImage gradientimg = new GreenRedImage(cur_image);
+            gradientimg.makeJPG(System.getProperty("user.dir")+ "\\single_test\\gradientimages\\","gradient_img_"+j,28,false);
+
+
+        }
+
     }
 
     Gradient getNormed_gradient(){

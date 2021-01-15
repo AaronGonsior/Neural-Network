@@ -33,7 +33,7 @@ public class Client {
                 weightedConnectionsList[i] = new WeightedConnections(layerdims[i],layerdims[i+1]);
             }
             weightedConnectionsList[weightedConnectionsList.length -1] = new WeightedConnections(layerdims[weightedConnectionsList.length -1],layerdims[weightedConnectionsList.length ]);
-            NeuralNetwork nn = new NeuralNetwork(layerdims,weightedConnectionsList);
+            NeuralNetwork nn = new NeuralNetwork(null,layerdims,weightedConnectionsList);
 
             File nnweights = new File("G:\\Users\\Aaron\\IdeaProjects\\NeuralNetHelloWorld\\NeuralNets\\leftright\\"+NNdir+".txt");
             nn.load(nnweights);
@@ -96,7 +96,7 @@ public class Client {
                 weightedConnectionsList[i] = new WeightedConnections(layerdims[i],layerdims[i+1]);
             }
             weightedConnectionsList[weightedConnectionsList.length - 1] = new WeightedConnections(layerdims[weightedConnectionsList.length - 1],layerdims[weightedConnectionsList.length ]);
-            NeuralNetwork nn = new NeuralNetwork(layerdims,weightedConnectionsList);
+            NeuralNetwork nn = new NeuralNetwork(null,layerdims,weightedConnectionsList);
 
             File nnweights = new File(digitsDir+NNdir+".txt");
             nn.load(nnweights);

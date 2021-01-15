@@ -9,9 +9,9 @@ public class GreenRedImage {
         this.image = image;
     }
 
-    void makeJPG(String path, String name,int dim) throws IOException {
+    void makeJPG(String path, String name,int dim,boolean amp) throws IOException {
 
-        boolean amp = true;
+        //boolean amp = true;
         double maximum = 1;
         if(amp) {
             for (double[] row : image) {

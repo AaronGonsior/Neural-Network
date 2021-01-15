@@ -14,6 +14,7 @@ public class Trainer {
     boolean final_;
     static final String basepath = System.getProperty("user.dir");
     NetworkDrawer nd;
+    GradientDrawer gd;
     int iteration;
     Problem digitclassification;
 
@@ -39,7 +40,7 @@ public class Trainer {
         for(int i = 0 ; i < weightedConnectionsList.length ; i++){
             weightedConnectionsList[i] = new WeightedConnections(layerdims[i],layerdims[i+1]);
         }
-        this.nn = new NeuralNetwork(layerdims,weightedConnectionsList);
+        this.nn = new NeuralNetwork(this,layerdims,weightedConnectionsList);
         nn.gradient = new Gradient(nn);
         nn.setName("NN");
     }
@@ -58,7 +59,7 @@ public class Trainer {
         //double errortotal;
         double[][] errors;
 
-        boolean testing = false;
+        boolean testing = true;
 
 
 
@@ -94,6 +95,8 @@ public class Trainer {
 
             errors = nn.propagate(idxReader);
             nn.backprop(idxReader,errors);
+            nn.gradient.makeJPG();
+            gd.update();
 
             this.avg_error = nn.averageError;
             this.best_bet_accuracy = nn.best_bet_accuracy;
@@ -104,7 +107,7 @@ public class Trainer {
             sigma = 0;
             switch (sigma_case) {
                 case 0:
-                    sigma = 1;
+                    sigma = 10000;
                     Function.print_n_log("Caution: sigma is constant! (" + sigma + ")",log_continue);
                     break;
                 case 1:
@@ -139,8 +142,9 @@ public class Trainer {
 
 
 
+            boolean grad_testing = false;
             // ----- testing -----
-            if(testing){
+            if(grad_testing){
                 System.out.print("grad_test");
                 Function.test_gradient(nn,idxReader,sigma);
                 System.out.print("start gradadapt");
@@ -256,7 +260,7 @@ public class Trainer {
         //set up neural network structure
         int inputnodenum = 28*28;
         int outputnodenum = 10;
-        int[] layerdims = new int[]{inputnodenum,10,outputnodenum};
+        int[] layerdims = new int[]{inputnodenum,16,10,outputnodenum};
 
         trainer.setNN(layerdims,null);
         trainer.nn.setName("savedNN_single");
@@ -281,7 +285,12 @@ public class Trainer {
 
         switch (Util.getOS()) {
             case WINDOWS:
-                trainer.nd = new NetworkDrawer(trainer.nn, 1200, 1000, 0, 0, trainer);
+                trainer.nd = new NetworkDrawer(trainer.nn, trainer);
+                trainer.nd.setResolution(1200,1000);
+                trainer.nd.setPosition(0,0);
+
+                trainer.gd = new GradientDrawer(trainer.nn.gradient);
+
         }
 
         switch (Util.getOS()){
@@ -290,6 +299,10 @@ public class Trainer {
                     trainer.nn.layerConnections[i].weightedConnections.makeJPG(GreenRedSavePath,"layerc_"+i);
                 }
                 trainer.nd.update();
+
+                trainer.nn.gradient.makeJPG();
+                trainer.gd.update();
+
         }
 
 
