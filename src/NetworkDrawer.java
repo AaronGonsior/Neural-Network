@@ -46,11 +46,13 @@ public class NetworkDrawer extends Canvas implements Runnable{
     void setResolution(int res_x, int res_y){
         width = res_x;
         height = res_y;
+        frame.setSize(width, height);
     }
 
     void setPosition(int pos_x, int pos_y){
         this.pos_x = pos_x;
         this.pos_y = pos_y;
+        frame.setLocation(pos_x,pos_y);
     }
 
     /*

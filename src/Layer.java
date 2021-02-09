@@ -55,6 +55,18 @@ public class Layer {
         }
     }
 
+    void normalize_error(){
+        double max_abs = 0;
+        for(int i = 0 ; i < error.length ; i++){
+            if(max_abs < Math.abs(error[i])) max_abs = Math.abs(error[i]);
+        }
+        double eps = 1e-300;
+        if(max_abs < eps) max_abs =1;
+        for(int i = 0 ; i < error.length ; i++){
+            error[i] = numNodes*(error[i]/max_abs);
+        }
+    }
+
     void setError(double[] error){
         this.error = error;
     }

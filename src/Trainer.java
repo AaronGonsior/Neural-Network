@@ -15,6 +15,7 @@ public class Trainer {
     static final String basepath = System.getProperty("user.dir");
     NetworkDrawer nd;
     GradientDrawer gd;
+    ChartDrawer cd;
     int iteration;
     Problem digitclassification;
 
@@ -93,25 +94,16 @@ public class Trainer {
             Function.print_n_log(message,log_continue);
 
 
-            errors = nn.propagate(idxReader);
-            nn.backprop(idxReader,errors);
-            nn.gradient.makeJPG();
-            gd.update();
-
-            this.avg_error = nn.averageError;
-            this.best_bet_accuracy = nn.best_bet_accuracy;
-
-
             int sigma_case = 0;
 
             sigma = 0;
             switch (sigma_case) {
                 case 0:
-                    sigma = 10000;
+                    sigma = 100;
                     Function.print_n_log("Caution: sigma is constant! (" + sigma + ")",log_continue);
                     break;
                 case 1:
-                    double frac = 0.1;
+                    double frac = 1;
                     sigma = avg_error*frac;
                     Function.print_n_log("Caution: sigma is a fraction (" + frac + ") of avg_error (" + sigma + ")",log_continue);
                     break;
@@ -152,8 +144,21 @@ public class Trainer {
             // ----- end testing -----
 
 
+            errors = nn.propagate(idxReader);
 
-            nn.GradAdapt(sigma);
+            nn.gradient.normalize();
+            nn.backprop(idxReader,errors,sigma);
+            int batchsize = 30;
+            //nn.backprop(idxReader,errors,batchsize,sigma);
+
+            //nn.gradient.makeJPG(); -- already in gd.update()
+            gd.update();
+
+            this.avg_error = nn.averageError;
+            this.best_bet_accuracy = nn.best_bet_accuracy;
+
+
+            //nn.GradAdapt(sigma); new: in nn.backprop()
 
         }
 
@@ -164,7 +169,7 @@ public class Trainer {
             switch (Util.getOS()) {
                 case WINDOWS:
 
-                    int num_print = 5;
+                    int num_print = 1;
 
                     System.out.println("testpic");
                     //best_bet_accuracy = nn.propagate_get_best_bet_accuracy(idxReader);
@@ -283,13 +288,42 @@ public class Trainer {
                 GreenRedSavePath = basepath + "/single_test/weights";
         }
 
+        boolean multimonitor = true;
+        char monitor_num = 't';
+
         switch (Util.getOS()) {
             case WINDOWS:
-                trainer.nd = new NetworkDrawer(trainer.nn, trainer);
-                trainer.nd.setResolution(1200,1000);
-                trainer.nd.setPosition(0,0);
 
                 trainer.gd = new GradientDrawer(trainer.nn.gradient);
+                trainer.cd = new ChartDrawer(null,new String[]{"avgError","BestBetAccu"});
+                trainer.nd = new NetworkDrawer(trainer.nn, trainer);
+
+                if(multimonitor){
+                    switch (monitor_num){
+                        case 'r':
+                            trainer.gd.setResolution(1450,710);
+                            trainer.gd.setPosition(2400,-100);
+
+                            trainer.cd.setResolution(950,550);
+                            trainer.cd.setPosition(2400,-600);
+
+                            trainer.nd.setResolution(550,550);
+                            trainer.nd.setPosition(3300,-630);
+                            break;
+
+                        case 't':
+                            trainer.gd.setResolution(1450,600);
+                            trainer.gd.setPosition(475,-1080+550-90);
+
+                            trainer.cd.setResolution(950,550);
+                            trainer.cd.setPosition(475,-1080-40);
+
+                            trainer.nd.setResolution(550,550);
+                            trainer.nd.setPosition(475+900,-1080-40);
+                            break;
+                    }
+
+                }
 
         }
 
@@ -306,7 +340,9 @@ public class Trainer {
         }
 
 
-        IdxReader idxReader = new IdxReader(inputImagePath,inputLabelPath,false);
+        boolean shuffle = false;
+        boolean round_shuffle = false;
+        IdxReader idxReader = new IdxReader(inputImagePath,inputLabelPath,shuffle);
 
 
 
@@ -322,11 +358,10 @@ public class Trainer {
         Problem digitclassification = new ImageClassification(28,28,10,idxReader);
 
 
-        ArrayList[] charts = new ArrayList[2];
-        ChartDrawer chartDrawer = new ChartDrawer(charts,new String[]{"avgError","BestBetAccu"},1000,1000);
-
 
         for(int round = 0 ; round < rounds ; round++){
+
+            if(round_shuffle) idxReader.shuffle();
 
             trainer.train(idxReader,iterations);
 
@@ -343,12 +378,13 @@ public class Trainer {
             }
 
 
-            trainer.avgErrors.add(trainer.avg_error);
-            trainer.bestBetAccus.add(trainer.best_bet_accuracy);
+            trainer.avgErrors.add(Function.roundoff(trainer.avg_error,3));
+            trainer.bestBetAccus.add(Function.roundoff(trainer.best_bet_accuracy,5));
 
+            ArrayList[] charts = new ArrayList[2];
             charts[0] = trainer.avgErrors;
             charts[1] = trainer.bestBetAccus;
-            chartDrawer.update(charts);
+            trainer.cd.update(charts);
 
             //manual print - obsolete thru ChartDrawer
             /*

@@ -1,7 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.Scanner;
 
 public class NeuralNetwork {
@@ -276,7 +273,7 @@ public class NeuralNetwork {
         return out;
     }
 
-    double[][] propagate(IdxReader idxReader){
+    double[][] propagate(IdxReader idxReader) throws Exception {
 
         double[][] errors = new double[idxReader.data.length][layerDimensions[layerDimensions.length-1]];
         double errortotal = 0;
@@ -288,7 +285,14 @@ public class NeuralNetwork {
         int label;
         double best_bet_accuracy = 0;
 
-        for (int img = 0; img < idxReader.data.length; img++) {
+        for (int img = 0; img < idxReader.data.length /* caution: -1 for testing! */; img++) {
+
+            if(img == idxReader.data.length-1){
+                GrayscaleImage testimg = new GrayscaleImage(idxReader.data[img],"1:1");
+                testimg.makeJPG(System.getProperty("user.dir")+"\\test","last image");
+                GreenRedImage testimg_gr = new GreenRedImage(idxReader.data[img]);
+                testimg_gr.makeJPG(System.getProperty("user.dir")+"\\test","last image GR",28,false);
+            }
 
             clearActivation();
             out = propagate(idxReader.data[img]);
@@ -335,177 +339,83 @@ public class NeuralNetwork {
 
     }
 
-    void backprop(IdxReader idxReader, double[][] errors) throws Exception {
+    void backprop(IdxReader idxReader, double[][] errors, double sigma) throws Exception {
 
-        //double errortotal = 0;
-        //double[] out;
         double[] error = new double[layerDimensions[layerDimensions.length-1]];
-
-        //double[][] labels = idxReader.getLables();
-        //double[][] data = idxReader.getData();
-
-        //gradient_weights.clear();
-        //gradient_biases.clear();
 
         gradient.clear();
 
-        for (int img = 0; img < idxReader.data.length; img++) {
+        for (int img = 0; img < idxReader.data.length /* caution: -1 for testing! */ ; img++) {
 
-            /*
-            clearActivation();
-            out = propagate(idxReader.data[img]);
-
-            for (int i = 0; i < out.length; i++) {
-                error[i] = Function.error(out[i], idxReader.labels[img][i]) * Function.squish_prime(layers[layers.length-1].nodes[i].getActivation());
-                errortotal += Math.abs(error[i]);
-            }
-             */
-
-            //gradient_weights.reset();
-            //gradient_biases.reset();
             for(int i = 0 ; i < error.length ; i++){
                 error[i] = errors[img][i];
             }
+
+            //only to be save - not really needed
+            for(int back = layers.length-1 ; back >= 0 ; back--){
+                layers[back].clearError();
+            }
+
             layers[layers.length-1].setError(error);
             for(int back = layers.length-2 ; back >= 0 ; back--){
-                //layerConnections[back].backprop(gradient_weights,gradient_biases);
                 layerConnections[back].backprop(gradient);
             }
 
         }
 
+        GradAdapt(sigma);
+
     }
 
 
-    void backprop(IdxReader idxReader, double[][] errors, int batchsize) throws Exception {
+    void backprop(IdxReader idxReader, double[][] errors, int batchsize, double sigma) throws Exception {
 
-        //double errortotal = 0;
-        //double[] out;
         double[] error = new double[layerDimensions[layerDimensions.length-1]];
-
-        //double[][] labels = idxReader.getLables();
-        //double[][] data = idxReader.getData();
-
-        //gradient_weights.clear();
-        //gradient_biases.clear();
 
         gradient.clear();
 
-        for(int batch = 0 ; batch < (int)(idxReader.data.length/batchsize) ; batch++){
-            for (int img = batch ; img < batch + batchsize ; img++) {
+        for (int img = 0; img < idxReader.data.length ; img++) {
 
-                /*
-                clearActivation();
-                out = propagate(idxReader.data[img]);
 
-                for (int i = 0; i < out.length; i++) {
-                    error[i] = Function.error(out[i], idxReader.labels[img][i]) * Function.squish_prime(layers[layers.length-1].nodes[i].getActivation());
-                    errortotal += Math.abs(error[i]);
-                }
-                 */
+            for(int i = 0 ; i < error.length ; i++){
+                error[i] = errors[img][i];
+            }
 
-                //gradient_weights.reset();
-                //gradient_biases.reset();
-                for(int i = 0 ; i < error.length ; i++){
-                    error[i] = errors[img][i];
-                }
-                layers[layers.length-1].setError(error);
-                for(int back = layers.length-2 ; back >= 0 ; back--){
-                    //layerConnections[back].backprop(gradient_weights,gradient_biases);
-                    layerConnections[back].backprop(gradient);
-                }
+            //only to be save - not really needed (?)
+            for(int back = layers.length-1 ; back >= 0 ; back--){
+                layers[back].clearError();
+            }
+
+            layers[layers.length-1].setError(error);
+            for(int back = layers.length-2 ; back >= 0 ; back--){
+                layerConnections[back].backprop(gradient);
+            }
+
+            if(img % batchsize == 0){
+
+                gradient.normalize();
+                //gradient.makeJPG();
+                //trainer.gd.update();
+
+                GradAdapt(sigma);
+                gradient.clear();
+
+                //trainer.nd.update();
+                //Thread.sleep(100);
 
             }
+
         }
 
+        GradAdapt(sigma);
 
     }
-
-
-
-    public void GradAdapt_old(double sigma) throws Exception {
-
-        /*
-        Is the order of filling and reading the gradient consistent??
-        reading here is:
-        layer: right to left
-        right nodes: left to right
-        left nodes: left to right
-
-        writing/filling in LayerConnection is:
-        layer: right to left
-        right nodes: left to right
-        left nodes: left to right
-
-        THE SAME
-         */
-
-        double[] grad_weights;
-        double[] grad_biases;
-        int partial;
-        double[][] weights;
-        double[][] newweights;
-        //double[] biases;
-        //double[] newbiases;
-
-        // !
-        //grad_weights = gradient_weights.getNormedGradient();
-        //grad_weights = gradient_weights.getGradient();
-        //grad_weights = gradient_weights.getAvgGradient();
-
-        //grad_biases = gradient_biases.getNormedGradient();
-        //grad_biases = gradient_biases.getGradient();
-        //grad_biases = gradient_biases.getAvgGradient();
-
-
-        partial = 0;
-        for(int layer = layers.length-2 ; layer > 0 ; layer--){
-            weights = layerConnections[layer].weightedConnections.getWeightedconnections();
-            newweights = new double[weights.length][weights[0].length];
-            for(int j = 0; j < layerDimensions[layer+1] ; j++){
-                for(int i = 0 ; i < layerDimensions[layer] ; i++){
-                    //newweights[i][j] = weights[i][j] + sigma * (+1)*grad_weights[partial++];
-                }
-            }
-            layerConnections[layer].weightedConnections.setWeightedConnections(newweights);
-        }
-
-
-
-        partial = 0;
-        for(int layer = layers.length-1 ; layer > 0 ; layer--){
-
-            /*
-            biases = new double[layers[layer].numNodes];
-            for(int node = 0 ; node < biases.length ; node++){
-                biases[node] = layers[layer].nodes[node].bias;
-            }
-
-            newbiases = new double[biases.length];
-            for(int node = 0 ; node < newbiases.length ; node++){
-                newbiases[node] = biases[node] + sigma * (-1)*grad_biases[partial++];
-            }
-
-            for(int node = 0 ; node < biases.length ; node++){
-                layers[layer].nodes[node].setBias(newbiases[node]);
-            }
-             */
-
-
-            for(int node = 0 ; node < layers[layer].numNodes ; node++){
-                //layers[layer].nodes[node].setBias( layers[layer].nodes[node].bias + sigma * (+1)*grad_biases[partial++] );
-            }
-
-
-
-        }
-
-    }
-
 
     void GradAdapt(double sigma) throws Exception {
-        Object[] layerconnection_gradients = gradient.layerconnection_gradients;
-        Object[] node_gradients = gradient.node_gradients;
+        Gradient normedGrad = gradient.getNormed_gradient();
+        //Gradient normedGrad = gradient;
+        Object[] layerconnection_gradients = normedGrad.layerconnection_gradients;
+        Object[] node_gradients = normedGrad.node_gradients;
 
         double[][] weights;
         double[][] newweights;
@@ -520,6 +430,7 @@ public class NeuralNetwork {
                     newweights[node_left][node_right] = weights[node_left][node_right] + sigma * (+1) * current_gradient_layerc[node_left][node_right];
                 }
             }
+            layerConnections[layer_c].weightedConnections.setWeightedConnections(newweights);
         }
 
         for(int layer = 0 ; layer < layers.length ; layer++){

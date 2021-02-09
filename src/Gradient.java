@@ -40,13 +40,15 @@ public class Gradient {
     }
 
     void add_weight(int layerconnection, int left, int right, double input){
-        double[][] current_gradient_layerc = (double[][]) layerconnection_gradients[layerconnection];
-        current_gradient_layerc[left][right] += input;
+        //double[][] current_gradient_layerc = (double[][]) layerconnection_gradients[layerconnection];
+        //current_gradient_layerc[left][right] += input;
+        ((double[][]) layerconnection_gradients[layerconnection])[left][right] += input;
     }
 
     void add_bias(int layer, int node, double input){
-        double[] current_gradient_node = (double[])node_gradients[layer];
-        current_gradient_node[node] += input;
+        //double[] current_gradient_node = (double[])node_gradients[layer];
+        //current_gradient_node[node] += input;
+        ((double[])node_gradients[layer])[node] += input;
     }
 
     /*
@@ -76,19 +78,42 @@ public class Gradient {
             layerconnection_gradients[layer_c] = new double[ nn.layerConnections[layer_c].layerLeft.nodes.length ][ nn.layerConnections[layer_c].layerRight.nodes.length ];
         }
 
-        //biases? add?? ----------------
+        node_gradients = new Object[nn.layers.length];
+        for(int layer = 0 ; layer < nn.layers.length ; layer++){
+            node_gradients[layer] = new double[nn.layers[layer].nodes.length];
+        }
 
     }
 
     void makeJPG() throws IOException {
         int dim = 28;
         double[][] cur_image = new double[dim][dim];
+        double[][] img_grad = (double[][])(layerconnection_gradients[0]);
+
+        boolean amp = false;
+        double max_abs = 0;
+        if(amp){
+            for(int j = 0 ; j < nn.layerDimensions[1] ; j++){
+                for(int i = 0 ; i < dim*dim ; i++){
+                    if(max_abs < Math.abs(img_grad[i][j]) ){
+                        max_abs = Math.abs(img_grad[i][j]);
+                    }
+                }
+            }
+        }
+
+        System.out.println("max_abs of makeJPG in gradient: " + max_abs);
+
+        double eps = 1e-200;
+        if(max_abs < eps) max_abs = 1;
+
         for(int j = 0 ; j < nn.layerDimensions[1] ; j++){
 
-
             for(int i = 0 ; i < dim*dim ; i++){
-                double[][] temp = (double[][])(layerconnection_gradients[0]);
-                cur_image[(int)(i/dim)][i%dim] = temp[i][j];
+
+                //[(int) Math.floor(i/dim)][Math.floorMod(i,dim)]
+                //[(int)(i/dim)][i%dim]
+                cur_image[(int) Math.floor(i/dim)][Math.floorMod(i,dim)] = img_grad[i][j]/max_abs;
             }
             GreenRedImage gradientimg = new GreenRedImage(cur_image);
             gradientimg.makeJPG(System.getProperty("user.dir")+ "\\single_test\\gradientimages\\","gradient_img_"+j,28,false);
@@ -113,7 +138,7 @@ public class Gradient {
         }
 
         norm = Math.sqrt(squaresum);
-
+        if(norm < 1e-3) norm = 1;
 
         Object[] new_layerconnection_gradients;
         new_layerconnection_gradients = new Object[nn.layerConnections.length];
@@ -141,6 +166,7 @@ public class Gradient {
         }
 
         norm = Math.sqrt(squaresum);
+        if(norm < 0.01) norm = 1;
 
         Object[] new_node_gradient;
         new_node_gradient = new Object[nn.layers.length];

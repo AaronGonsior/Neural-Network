@@ -60,13 +60,16 @@ public class LayerConnection {
 
     void backprop(Gradient gradient) throws Exception {
 
+
+        layerRight.normalize_error();
         double[] error = layerRight.getError();
         double[][] connections = weightedConnections.getWeightedconnections();
         double[] leftLayerFeedback = new double[numLeft];
+        double feedback_increment;
 
-        //System.out.println("Attention! biases deactivated in LayerConnection: backprop()");
+        System.out.println("Attention! biases deactivated in LayerConnection: backprop()");
         for(int node = 0 ; node < numRight ; node++){
-            gradient.add_bias(layerRight.layer_number,node,error[node]);
+            //gradient.add_bias(layerRight.layer_number,node,error[node]);
         }
 
         for(int node_right = 0 ; node_right < numRight ; node_right++){
@@ -76,15 +79,18 @@ public class LayerConnection {
             }
         }
 
+
         for(int node_left = 0 ; node_left < numLeft ; node_left++){
+            feedback_increment = 0;
             for(int node_right = 0 ; node_right < numRight ; node_right++){
-                leftLayerFeedback[node_left] += connections[node_left][node_right] * error[node_right];
+                feedback_increment += connections[node_left][node_right] * error[node_right];
             }
-            leftLayerFeedback[node_left] *= Function.squish_prime(layerLeft.nodes[node_left].getActivation());
+            feedback_increment *= Function.squish_prime(layerLeft.nodes[node_left].getActivation());
+            leftLayerFeedback[node_left] += feedback_increment;
         }
 
-        layerLeft.setError(leftLayerFeedback);
-        weightedConnections.setWeightedConnections(connections);
+        layerLeft.addError(leftLayerFeedback); //set???????????? add -- that's why last img was so overinfluencing!
+        //weightedConnections.setWeightedConnections(connections); nope!
 
     }
 

@@ -42,7 +42,8 @@ public class GradientDrawer extends Canvas implements Runnable {
     }
 
 
-    public void update() throws InterruptedException {
+    public void update() throws InterruptedException, IOException {
+        gradient.makeJPG();
         int[] dims = Arrays.copyOfRange(gradient.nn.layerDimensions,1,gradient.nn.layerDimensions.length);
         int max = Arrays.stream(dims).max().getAsInt();
         //System.out.print(max);
@@ -77,8 +78,43 @@ public class GradientDrawer extends Canvas implements Runnable {
                 g.drawLine(j,i,j,i);
             }
         }
+
+        //coloramp
+        boolean amp = false;
+        double bias_max_abs = 0;
+        double weights_max_abs = 0;
+        if(amp) {
+            //biases
+            for (int layer = 1; layer < layerdims.length; layer++) {
+                for (int node = 0; node < layerdims[layer]; node++) {
+                    if (bias_max_abs < Math.abs(((double[]) (gradient.node_gradients[layer]))[node])) {
+                        bias_max_abs = Math.abs(((double[]) (gradient.node_gradients[layer]))[node]);
+                    }
+                }
+            }
+
+            //weights
+            for (int layer = 1; layer < layerdims.length-1; layer++) {
+                for (int left = 0; left < layerdims[layer]; left++) {
+                    for (int right = 0; right < layerdims[layer + 1]; right++) {
+                        if (weights_max_abs < Math.abs(((double[][]) (gradient.layerconnection_gradients[layer]))[left][right])) {
+                            weights_max_abs = Math.abs(((double[][]) (gradient.layerconnection_gradients[layer]))[left][right]);
+                        }
+                    }
+                }
+            }
+
+            double eps = 1e-300;
+            if(bias_max_abs < eps) bias_max_abs = 1;
+            if(weights_max_abs < eps) weights_max_abs = 1;
+
+        }
+
+        double activation;
+
         for(int layer = 1 ; layer < layerdims.length ; layer++){
             for(int i = 0 ; i < layerdims[layer] ; i++){
+
                 if(layer == 1){
 
                     try {
@@ -105,15 +141,19 @@ public class GradientDrawer extends Canvas implements Runnable {
                 int R,G,B;
                 //double bias = gradient.nn.layers[layer].nodes[i].bias;
                 double bias = ((double[])(gradient.node_gradients[layer]))[i];
+                if(amp) bias/=bias_max_abs;
+                //bias = Function.atan1(bias);
+                bias = Math.max(-1, Math.min(1,bias));
+
                 if(bias > 0){
-                    R = (int)(255*( 1 - Function.atan1( bias )));
+                    R = (int)(255*( 1 - bias ));
                     G = 255;
-                    B = (int)(255*( 1 - Function.atan1( bias )));
+                    B = (int)(255*( 1 - bias ));
                 }
                 else {
                     R = 255;
-                    G = (int)(255*( 1 + Function.atan1( bias )));
-                    B = (int)(255*( 1 + Function.atan1( bias )));
+                    G = (int)(255*( 1 + bias ));
+                    B = (int)(255*( 1 + bias ));
                 }
 
                 g.setColor(new Color(R,G,B));
@@ -137,15 +177,20 @@ public class GradientDrawer extends Canvas implements Runnable {
 
                     int R,G,B;
 
+                    activation = weights[left][right];
+                    if(amp) activation/=weights_max_abs;
+                    //activation = Function.atan1(activation);
+                    activation = Math.max(-1, Math.min(1,activation));
+
                     if(weights[left][right] > 0){
-                        R = (int)(255*( 1 - Math.min(1,weights[left][right] )));
+                        R = (int)(255*( 1 - activation ));
                         G = 255;
-                        B = (int)(255*( 1 - Math.min(1,weights[left][right] )));
+                        B = (int)(255*( 1 - activation ));
                     }
                     else {
                         R = 255;
-                        G = (int)(255*( 1 + Math.max(-1,weights[left][right] )));
-                        B = (int)(255*( 1 + Math.max(-1,weights[left][right] )));
+                        G = (int)(255*( 1 + activation ));
+                        B = (int)(255*( 1 + activation ));
                     }
 
                     Color line = new Color(R, G, B);
@@ -169,11 +214,13 @@ public class GradientDrawer extends Canvas implements Runnable {
     void setResolution(int res_x, int res_y){
         width = res_x;
         height = res_y;
+        frame.setSize(width, height);
     }
 
     void setPosition(int pos_x, int pos_y){
         this.pos_x = pos_x;
         this.pos_y = pos_y;
+        frame.setLocation(pos_x,pos_y);
     }
 
 

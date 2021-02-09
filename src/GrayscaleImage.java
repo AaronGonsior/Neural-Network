@@ -59,7 +59,8 @@ public class GrayscaleImage {
 
     void makeJPG(String path, String name) throws IOException {
 
-        boolean amp = true;
+        boolean inverted = false;
+        boolean amp = false;
         double maximum = 1;
         if(amp) {
             for (double[] row : image) {
@@ -82,9 +83,18 @@ public class GrayscaleImage {
 
         File file = new File(fullpath);
 
+        //int max_rgb = 255*255*255+255*255+255;
+        //int max_rgb = 16777215;
+        int max_rgb = (255 << 16) | (255 << 8) | 255; //=16777215
+
+
         for(int i = 0; i < image[0].length ; i++){
             for(int j = 0 ; j < image[1].length ; j++){
-                bufferedImage.setRGB(j,i,16777215 - (int)(image[i][j]) );
+                if(!inverted){
+                    bufferedImage.setRGB(j,i,max_rgb - (int)(image[i][j]) );
+                }else {
+                    bufferedImage.setRGB(j,i,-max_rgb + (int)(image[i][j]) );
+                }
             }
         }
         ImageIO.write(bufferedImage, "jpg", file);

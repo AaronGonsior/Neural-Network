@@ -501,8 +501,8 @@ public class Function {
     }
 
     public static double error(double out, double lable){
-        //double output = lable-out;
-        double output = Math.signum(lable-out)*0.5*Math.pow(lable-out,2);
+        double output = lable-out;
+        //double output = Math.signum(lable-out)*0.5*Math.pow(lable-out,2);
 
         //if(Double.isNaN(output)) throw new IllegalStateException();
         //if(output > 0) output *= 9;

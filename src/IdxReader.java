@@ -11,14 +11,23 @@ public class IdxReader {
     public double[][] labels;
 
     public IdxReader(String inputImagePath, String inputLabelPath,boolean shuffle) throws Exception {
-        //this.data = readImages(inputImagePath);
-        //this.labels = readLables(inputLabelPath);
         original(inputLabelPath,inputImagePath);
         System.out.println("IDX loaded with date size " + data.length + " and label size " + this.labels.length);
-        //System.out.print(data);
-        //System.out.print(labels);
-        /*
-        if(shuffle){
+        if(shuffle) shuffle();
+    }
+
+    /*
+    double[][] getData(){
+        return this.data;
+    }
+
+    double[][] getLables(){
+        return this.labels;
+    }
+     */
+
+    public void shuffle(){
+
             //- optional improvement via random partition
             int[] partition = RandomPartitionSequence.RandomPartition(data.length);
             double[][] newdata = new double[data.length][28*28];
@@ -35,19 +44,8 @@ public class IdxReader {
             }
             this.data = newdata;
             this.labels = newlables;
-        }
-         */
     }
 
-    /*
-    double[][] getData(){
-        return this.data;
-    }
-
-    double[][] getLables(){
-        return this.labels;
-    }
-     */
 
     public static double[][] readImages(String inputImagePath, int firstimg , int lastimg){
 
@@ -318,12 +316,13 @@ public class IdxReader {
 
                 for(int p = 0; p < numberOfPixels; p++) {
                     int gray = 255 - inImage.read();
+                    //int gray = inImage.read();
                     imgPixels[p] = 0xFF000000 | (gray<<16) | (gray<<8) | gray;
                 }
 
                 //mine
                 for(int p = 0 ; p < imgPixels.length ; p++){
-                    data[i][p] = imgPixels[p];
+                    data[i][p] = -1 - imgPixels[p];
                 }
 
                 //image.setRGB(0, 0, numberOfColumns, numberOfRows, imgPixels, 0, numberOfColumns);
