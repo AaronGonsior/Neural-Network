@@ -146,7 +146,7 @@ public class NetworkDrawer extends Canvas implements Runnable{
 
         double[][] weights;
         for(int layer = 1 ; layer < layerdims.length-1 ; layer++){
-            weights = nn.layerConnections[layer-1].weightedConnections.getWeightedconnections();
+            weights = nn.layerConnections[layer/*-1*/].weightedConnections.getWeightedconnections();
             for(int left = 0 ; left < layerdims[layer] ; left++){
                 for(int right = 0 ; right < layerdims[layer+1] ; right++){
 

@@ -285,17 +285,21 @@ public class NeuralNetwork {
         int label;
         double best_bet_accuracy = 0;
 
-        for (int img = 0; img < idxReader.data.length /* caution: -1 for testing! */; img++) {
+        for (int img = 0; img < idxReader.data.length -1 /* caution: -1 for testing! */; img++) {
+        //for(int img = idxReader.data.length-1 ; img >=0 ; img--){
 
-            if(img == idxReader.data.length-1){
+            if(img == idxReader.data.length-1 -1 || img == 0){
                 GrayscaleImage testimg = new GrayscaleImage(idxReader.data[img],"1:1");
-                testimg.makeJPG(System.getProperty("user.dir")+"\\test","last image");
+                testimg.makeJPG(System.getProperty("user.dir")+"\\test","imgnr. "+img);
                 GreenRedImage testimg_gr = new GreenRedImage(idxReader.data[img]);
-                testimg_gr.makeJPG(System.getProperty("user.dir")+"\\test","last image GR",28,false);
+                testimg_gr.makeJPG(System.getProperty("user.dir")+"\\test","imgnr. "+img+" GR",28,false);
             }
 
             clearActivation();
             out = propagate(idxReader.data[img]);
+
+            // -------------------------- pd testing ------------------------------
+            if(img % 10000 == 0) trainer.pd.update(img);
 
             /*
             for (int i = 0; i < out.length; i++) {

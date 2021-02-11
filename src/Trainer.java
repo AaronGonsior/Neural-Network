@@ -16,6 +16,7 @@ public class Trainer {
     NetworkDrawer nd;
     GradientDrawer gd;
     ChartDrawer cd;
+    PropagateDrawer pd;
     int iteration;
     Problem digitclassification;
 
@@ -62,30 +63,6 @@ public class Trainer {
 
         boolean testing = true;
 
-
-
-        /*
-        //- optional improvement via random partition
-        int[] partition = RandomPartitionSequence.RandomPartition(idxReader.data.length);
-        double[][] newdata = new double[idxReader.data.length][28*28];
-        double[][] newlables = new double[idxReader.lables.length][10];
-        for(int img = 0 ; img < idxReader.data.length ; img++){
-            for(int pixel = 0 ; pixel < 28*28 ; pixel++){
-                newdata[partition[img]][pixel] = idxReader.data[img][pixel];
-            }
-        }
-        for(int img = 0 ; img < idxReader.data.length ; img++){
-            for(int digit = 0 ; digit < 10 ; digit++){
-                newlables[partition[img]][digit] = idxReader.lables[img][digit];
-            }
-        }
-        idxReader.data = newdata;
-        idxReader.lables = newlables;
-         */
-
-
-
-
         for(int iteration = 1 ; iteration <= iterations ; iteration++){
 
             this.iteration++;
@@ -99,7 +76,7 @@ public class Trainer {
             sigma = 0;
             switch (sigma_case) {
                 case 0:
-                    sigma = 100;
+                    sigma = 1;
                     Function.print_n_log("Caution: sigma is constant! (" + sigma + ")",log_continue);
                     break;
                 case 1:
@@ -146,7 +123,7 @@ public class Trainer {
 
             errors = nn.propagate(idxReader);
 
-            nn.gradient.normalize();
+            //nn.gradient.normalize();
             nn.backprop(idxReader,errors,sigma);
             int batchsize = 30;
             //nn.backprop(idxReader,errors,batchsize,sigma);
@@ -169,7 +146,7 @@ public class Trainer {
             switch (Util.getOS()) {
                 case WINDOWS:
 
-                    int num_print = 1;
+                    int num_print = 0;
 
                     System.out.println("testpic");
                     //best_bet_accuracy = nn.propagate_get_best_bet_accuracy(idxReader);
@@ -296,7 +273,9 @@ public class Trainer {
 
                 trainer.gd = new GradientDrawer(trainer.nn.gradient);
                 trainer.cd = new ChartDrawer(null,new String[]{"avgError","BestBetAccu"});
+                trainer.pd = new PropagateDrawer(trainer.nn,trainer);
                 trainer.nd = new NetworkDrawer(trainer.nn, trainer);
+
 
                 if(multimonitor){
                     switch (monitor_num){
@@ -312,14 +291,19 @@ public class Trainer {
                             break;
 
                         case 't':
-                            trainer.gd.setResolution(1450,600);
+                            trainer.gd.setResolution(950,600);
                             trainer.gd.setPosition(475,-1080+550-90);
 
                             trainer.cd.setResolution(950,550);
                             trainer.cd.setPosition(475,-1080-40);
 
+                            trainer.pd.setResolution(550,600);
+                            trainer.pd.setPosition(475+900,-1080+550-90);
+
                             trainer.nd.setResolution(550,550);
                             trainer.nd.setPosition(475+900,-1080-40);
+
+
                             break;
                     }
 
@@ -374,6 +358,7 @@ public class Trainer {
                         trainer.nn.layerConnections[i].weightedConnections.makeJPG(GreenRedSavePath,"layerc_"+i);
                     }
                     trainer.nd.update();
+                    trainer.pd.update(0);
 
             }
 
@@ -385,22 +370,6 @@ public class Trainer {
             charts[0] = trainer.avgErrors;
             charts[1] = trainer.bestBetAccus;
             trainer.cd.update(charts);
-
-            //manual print - obsolete thru ChartDrawer
-            /*
-            for(int err = 0 ; err < trainer.avgErrors.size() ; err++){
-                System.out.print(trainer.avgErrors.get(err) + " - " );
-            }
-            System.out.print("\n");
-
-            for(int bb = 0 ; bb < trainer.avgErrors.size() ; bb++){
-                System.out.print(trainer.bestBetAccus.get(bb) + " - " );
-            }
-            System.out.print("\n");
-             */
-
-
-
 
         }
 

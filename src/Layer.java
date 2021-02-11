@@ -72,12 +72,7 @@ public class Layer {
     }
 
     void addError(double[] error){
-
-        /*for(double num : error){
-            if(Double.isNaN(num)) throw new IllegalStateException();
-        }
-         */
-        Function.NaN_Test(error);
+        //Function.NaN_Test(error);
 
         for (int i = 0 ; i < error.length ; i++) {
             this.error[i] += error[i];

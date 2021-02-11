@@ -9,6 +9,7 @@ public class Function {
         //return Math.tanh(input);
         //return Math.exp(-(1/Math.pow(input,2)));
     }
+
     public static double squish_prime(double input){
         return squish(input)*(1-squish(input));
     }
